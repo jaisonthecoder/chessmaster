@@ -1,0 +1,93 @@
+# 8. Roadmap & Delivery Plan
+
+## 8.1 Phases
+
+| Phase | Duration (estimate) | Scope | Exit criteria |
+|---|---|---|---|
+| **0. Discovery and prototype** | 4–6 weeks | Interviews with kids, parents and teachers; art style tests (3 piece-set styles); a playable R3F board prototype; Pip character test; tech spike (Stockfish WASM, Rive, Capacitor) | Art direction approved; kids aged 5–7 can move pieces unaided; 60 fps on mid-tier tablets |
+| **1. MVP: "Learn the Rules"** | 14–16 weeks | Levels 1–3 (about 35 lessons), Little Knights and Explorers tracks, 8 mini-games, 3D board with 2 themes plus 2D mode, 3 friendly bots, offline mode, parent hub (basic), English | 95% of test kids pass the Rules Champion boss; D7 retention ≥ 35% in the beta |
+| **2. "Play and Improve"** | 12–14 weeks | Levels 4–6, Academy track, Puzzle Gym (adaptive), game review, 6 bots, more themes, Arabic (right-to-left), teacher mode v1 | Puzzle rating growth for 60% of active kids month-on-month; 20 pilot classrooms |
+| **3. "Become a Master"** | 16–20 weeks | Levels 7–10, Repertoire Builder, Hall of Legends, tournament simulator, AR mode, friend games with invite codes, optional AI coach, more languages | Full curriculum live; app store launch; club and federation partnerships |
+| **4. Live operations** | Ongoing | Weekly quests, seasonal kingdoms, new board themes, coach content, school programmes, competitions | Retention and learning KPIs met each quarter |
+
+## 8.2 MVP feature list (Phase 1)
+
+**Must have**
+- [ ] Onboarding: parent creates an account, child profile, age track selection, "light on the right" first interaction within 30 seconds
+- [ ] Adventure map: Board Village, Piece Valley, Royal Castle
+- [ ] Lessons 1.1–3.12 in the LK and EX voices, with voice-over and subtitles
+- [ ] 3D board (Story Set + Adventure Set), tap and drag moves, legal dots, highlights, 2D toggle
+- [ ] chess-core with every rule, including castling, en passant, promotion, and all draws
+- [ ] Mini-games: Build the Army, Coordinate Rush, Star Collector, Knight's Quest, King's Walk, Pawn Wars, Hungry Pieces, Mate or Stalemate?
+- [ ] Bots: Bumble, Fizz, Rocky
+- [ ] Boss battles for Levels 1–3, certificates
+- [ ] Stars, stickers, simple badges
+- [ ] Offline mode + sync
+- [ ] Parent hub: progress, time limits
+- [ ] Privacy compliance (consent flow, no PII for children)
+
+**Should have**
+- [ ] Pass-and-play family mode
+- [ ] The Review Queue (spaced repetition)
+- [ ] Quality auto-detection
+
+**Won't have in the MVP:** AR, friend games, AI coach, Academy track, Levels 4–10.
+
+## 8.3 Team (Phase 1)
+
+| Role | Count |
+|---|---|
+| Product manager | 1 |
+| Learning designer (education background) | 1 |
+| Chess coach / curriculum lead (FIDE trainer or titled player) | 1 (part-time OK) |
+| Frontend / 3D engineers (React + Three.js) | 2–3 |
+| Backend engineer | 1 |
+| 3D artist (pieces, boards, environments) | 1–2 |
+| 2D / Rive character animator | 1 |
+| UX/UI designer (child UX experience) | 1 |
+| Sound designer + voice-over casting (outsourced) | contract |
+| QA engineer | 1 |
+| Child UX researcher (play-tests) | part-time |
+
+## 8.4 Workflow per lesson (content pipeline)
+
+1. **Curriculum lead** defines the objective, positions and common misconceptions.
+2. **Learning designer** writes the script in the format of [document 4](04-lesson-scripts.md) (all three voices).
+3. **Chess review:** every position is verified (lesson validator + a human coach).
+4. **Voice-over recording** and localisation.
+5. **Implementation** in the lesson editor (YAML), with animation hooks.
+6. **Play-test** with 5+ kids in the target age band; iterate.
+7. **Release** behind a feature flag; monitor completion and failure points.
+
+## 8.5 KPIs and analytics
+
+| Area | Metric | Target (after launch) |
+|---|---|---|
+| Learning | Rules Champion pass rate | ≥ 95% |
+| Learning | Concepts mastered per active child per week | ≥ 2 |
+| Learning | Puzzle rating growth per month (active kids) | +50 or more |
+| Engagement | D1 / D7 / D30 retention | 55% / 40% / 25% |
+| Engagement | Lesson completion rate | ≥ 85% |
+| Wellbeing | Average session length within the age target | ≥ 80% of sessions |
+| Trust | Parent NPS | ≥ 50 |
+| Schools | Active classrooms; assignment completion | Growth quarter on quarter; ≥ 70% |
+
+## 8.6 Risks and mitigations
+
+| Risk | Mitigation |
+|---|---|
+| 3D too heavy for school Chromebooks | Quality tiers, 2D fallback, streamed asset packs, early device lab |
+| Young kids can't use drag gestures | Tap-tap moves, big targets, errorless mode, early play-tests |
+| Content volume (about 120 lessons × 3 voices × several languages) | Data-driven lessons, lesson editor, reusable mini-game generators, phased release |
+| Teaching errors in rules | This rules reference as the single source of truth; automated validation; coach review |
+| Kids get bored after learning the rules | Bots with personality, quests, Pawn Wars and other variants, family play, seasonal events |
+| Privacy or compliance issues | Privacy by design, legal review before launch, no PII, no chat |
+| Monetisation pressure leading to dark patterns | Business model: freemium for families (Levels 1–3 free; subscription for the full academy) + school licences; no ads, no loot boxes |
+
+## 8.7 Immediate next steps
+
+1. Approve this plan and the art direction options.
+2. Hire or assign the curriculum lead and learning designer; finalise the Level 1–3 scripts.
+3. Build the Phase 0 prototype: 3D board + Pip + lessons 2.1 (Rook) and 2.9 (Knight) end to end.
+4. Run play-tests with 10 kids (ages 5–7 and 8–10) and refine.
+5. Set up the repository structure from [7.9](07-technical-architecture.md#79-repository-layout-proposed), with CI running the perft and lesson-validation tests.
