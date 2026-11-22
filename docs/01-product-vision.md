@@ -10,7 +10,7 @@ can go on to compete and become titled masters.
 
 | Goal | How we know we achieved it |
 |------|----------------------------|
-| Every child learns **all the rules correctly** | 95% of children who finish Level 3 pass the "Rules Champion" test: legal moves, check, mate, stalemate, castling, en passant, promotion |
+| Every child learns **all the rules correctly** | 30 days after finishing Level 3, 90% still pass a delayed rules re-test, and in school pilots children apply the rules correctly on a **real board** (transfer test) |
 | Children **want to come back** | D7 retention ≥ 40%, D30 ≥ 25%; average of 3 or more sessions a week |
 | Children **actually get stronger** | Measurable rating growth on puzzles and against bots; transfer to over-the-board play (assessed by teachers and coaches) |
 | Parents and teachers **trust it** | No ads, no open chat, privacy by design, clear progress reports |
@@ -54,7 +54,7 @@ override the track, and the app suggests a switch when a child's behaviour sugge
 6. **A real-board feel.** Weight, wood, sound and shadow make it feel like a physical set, which helps transfer to over-the-board play.
 7. **Calm, not addictive.** No loot boxes, no pay-to-win, no manipulative streak pressure, built-in break reminders.
 8. **Safe by design.** No ads, no open chat, no personal data from children, parental consent (COPPA, GDPR-K, UK Age Appropriate Design Code, UAE PDPL).
-9. **Accessible to all.** Colour-blind-safe highlights, full voice-over, adjustable speed, reduced-motion mode, multilingual (including right-to-left Arabic).
+9. **Accessible to all.** Colour-blind-safe highlights, full voice-over, adjustable speed, reduced-motion mode, a voice assistant on every screen, and four launch languages: English, Malayalam, Hindi and Arabic (right-to-left). See [document 16](16-voice-assistant-and-languages.md).
 
 ## 1.6 Core experience loop
 

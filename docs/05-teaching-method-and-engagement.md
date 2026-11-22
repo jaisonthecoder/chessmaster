@@ -37,7 +37,7 @@ For Little Knights it is simplified to: *"Is anything in danger? Is my piece saf
 
 ## 5.3 Adaptive learning engine
 
-- **Child model:** a skill rating per concept (Glicko-2-style rating with uncertainty) plus an overall puzzle rating.
+- **One mastery model:** each concept has a probability that the child has mastered it (knowledge tracing), updated after every answer. The same number drives everything: when a concept is due for review (spaced repetition schedules a review when the estimated recall drops below about 85%), which lesson comes next, and how hard the next item is. A separate Glicko-2 puzzle rating is used only to pick puzzles of the right difficulty.
 - **Puzzle selection:** choose puzzles near the child's rating, tagged with the concepts due for review. Aim for 70–80% success.
 - **Frustration detection:** 3 failures in a row, rapid random taps, or long idle time lowers the difficulty, offers a hint, or suggests a fun mini-game break.
 - **Boredom detection:** very fast perfect streaks unlock "Challenge mode" or skip ahead (with a quick placement check).
@@ -57,10 +57,25 @@ Based on **Self-Determination Theory**: autonomy, competence and relatedness.
 - **Stars (1–3)** per lesson and mini-game, so a lesson can be replayed for a better score.
 - **XP and levels** for Explorers and Academy.
 - **Badges:** concept badges (Fork Master I–III), behaviour badges (Practised 5 days, Used the Safety Check 50 times).
-- **Collectibles:** board themes (Enchanted Forest, Ocean Reef, Space Station, Candy Land, Desert Dunes, Classic Tournament Walnut), piece sets, Pip outfits. All are **earned, never bought with real money**.
+- **Collectibles:** board themes (Enchanted Forest, Ocean Reef, Space Station, Sweet Treats, Desert Dunes, Classic Tournament Walnut), piece sets, Pip outfits. All are **earned, never bought with real money**.
 - **Gentle streaks:** "Practice days this week" (not consecutive-day pressure), with free "rest days".
 - **Daily Puzzle** and **Weekly Quest** (for example, "Win 3 games by castling early").
 - **Leaderboards:** friends and class only. Never global for under-13s.
+
+### Fading the training wheels
+Legal-move dots and blunder warnings help beginners, but children must not depend on them in real games.
+- Dots fade **per concept**: once a piece's movement is mastered, dots for that piece appear only after a short pause, then only on request.
+- **Tournament Mode** (introduced in Lesson 4.21): no dots, touch-move on, no take-backs. From Level 6, bot games default to Tournament Mode; children can switch help back on in practice.
+- Blunder warnings fade from Level 4 (big blunders only) and are off by default from Level 7.
+
+### Two kinds of motivation: young children and teenagers
+| | Ages 5–10 | Ages 11–15 (Academy) |
+|---|---|---|
+| Home screen | Adventure map with Pip | **Training dashboard**: rating graph, today's plan, streaks, weak spots |
+| Story | A story arc per kingdom (5.7) | Short "case files" about real historic games |
+| Rewards | Stars, stickers, map unlocks | Ratings, puzzle-streak records, mastery percentages, titles inside the app (clearly *not* FIDE titles) |
+| Social | Family pass-and-play, class challenges | Friends and class leaderboards; opt-in rated games against other players aged 13+ (parent-approved, no chat); import of games from online accounts for review |
+| Real world | Real Board Challenge | Club and tournament finder (via parent), Training Plan mode |
 
 ### What we deliberately avoid
 - Loot boxes, gacha, paid currency, ads, countdown timers that push purchases.
@@ -88,3 +103,24 @@ Based on **Self-Determination Theory**: autonomy, competence and relatedness.
 - Gender-balanced characters and Hall of Legends stories (for example, Vera Menchik, the Polgár sisters, Hou Yifan, Ju Wenjun).
 - Culturally diverse board themes and stories, including chess history from India (chaturanga), Persia (shatranj) and the Arab world (the history of shatranj, and the Arabian Mate pattern).
 - Support for neurodivergent learners: predictable lesson structure, a calm mode (reduced effects and sound), adjustable pacing.
+
+## 5.7 The story arc across all kingdoms
+
+Pip's dream of becoming a queen (Lesson 3.9) is the first chapter, not the end. Each kingdom has its own short story with recurring characters:
+
+| Kingdom | Story beat |
+|---|---|
+| 0 Pip's Playroom | Pip wakes up and makes a new friend: the child |
+| 1 Board Village | The village is a mess; the child helps put every house (square) back at its address |
+| 2 Piece Valley | Pip visits each piece's land and learns their secret moves |
+| 3 Royal Castle | King Bram is in danger! The child learns to protect and to trap kings; Pip's promotion dream comes true |
+| 4 Battle Fields | Pip starts again as a pawn in a new army ("every game is a new journey") and learns to win whole games |
+| 5 Tactics Jungle | A treasure map: each tactic is a hidden trick to find the treasure |
+| 6 Endgame Mountains | A climb to the summit: fewer pieces, more skill |
+| 7 Opening Harbour | Choosing a ship (opening) for the voyage |
+| 8 Strategy Citadel | Building a city that is strong everywhere |
+| 9 Calculation Observatory | Seeing the future through the telescope |
+| 10 Grandmaster Tower | The child's first tournament; Pip and Nova cheer from the side |
+
+When a child moves from Pip's track to Nova's (around age 11), Pip hands over in a short farewell scene: *"You're ready for Coach Nova now. I'll be cheering for you!"* (see [document 11](11-self-guided-learning.md#1111-moving-from-pip-to-nova)).
+

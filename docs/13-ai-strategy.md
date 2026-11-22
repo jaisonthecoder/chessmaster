@@ -41,8 +41,8 @@ Most of the app's "intelligence" comes from kind 1 and kind 2. Kind 3 is used on
 | **Adaptive learning** | Glicko-2 ratings per concept + knowledge tracing (probability a child has mastered each concept) + spaced repetition | ▶ Continue choices, warm-ups, difficulty up and down |
 | **Behaviour signals** | Heuristics first (rapid taps, idle time, error streaks, answer speed); later a small on-device classifier trained on anonymised aggregate data | Frustration, boredom, guessing and "younger sibling" detection (scenario playbook, document 11) |
 | **Rule-based explanations** | Templates filled with engine facts ("Your {piece} on {square} can be captured by the {attacker}") | The first answer to every "Why?" question |
-| **Speech recognition** (optional) | The device's own speech recognition, off by default, parent-enabled | Saying answers aloud ("knight!", "e4") |
-| **Text-to-speech** | Platform voices for dynamic lines that have no recorded voice-over | Live explanations, names of squares |
+| **Speech recognition** (optional) | On-device recognition only (never a cloud speech service, including browser speech APIs that send audio to a server); off by default, parent-enabled | Saying answers aloud ("knight!", "e4") |
+| **Text-to-speech** | One "reading voice" per guide, designed to sound close to Pip and Nova, for dynamic and library lines that have no recorded voice-over | Live explanations, names of squares |
 | **Camera board recognition** (phase 3, optional) | On-device vision model reads a photo of a real board into a position | "Load my real board" so the coach can help with a game on the table |
 
 ---
@@ -72,8 +72,8 @@ each on Claude Opus 5.5 with the batch discount, that is in the region of **$200
 
 | # | Feature | Who gets it | What happens |
 |---|---|---|---|
-| 1 | **Coach's Corner game review** | All tracks | After a game, the engine finds up to 3 key moments; the LLM explains each in kid language and turns it into a question ("Can you find a better move here?") |
-| 2 | **"Why?" button** | All tracks | Template answer first (free). If the child taps "Tell me more", the LLM explains the specific position |
+| 1 | **Coach's Corner game review** | Everyone gets the engine + template + library version; the live LLM wording only for 13+, or under 13 with parent opt-in | After a game, the engine finds up to 3 key moments; the LLM explains each in kid language and turns it into a question ("Can you find a better move here?") |
+| 2 | **"Why?" button** | Same rule as feature 1 | Template answer first (free). If the child taps "Tell me more", the LLM explains the specific position |
 | 3 | **Socratic hints** | Explorers, Academy | When a child is stuck and no pre-made hint fits, the LLM writes a guiding question instead of the answer |
 | 4 | **Ask Pip / Ask Nova** | Ages 8+ with parent opt-in; Little Knights get preset question buttons only | Chess-only questions by voice or text ("Why can't my king castle?"), answered using the current position's facts |
 | 5 | **Teach-back grading** | Academy | The child explains *why* a move works in their own words; the LLM compares it with the engine facts and gives feedback |
@@ -103,7 +103,8 @@ Child taps "Why?" / finishes a game / asks Pip
 │    attacked pieces, tactic tags                                                   │
 │ 6. Claude call: cached system prompt (persona, safety rules, age style)           │
 │    + facts JSON → structured reply                                                │
-│ 7. Validator: every square, piece and move in the reply must match the facts     │
+│ 7. Validator: every structured claim (piece on square, defended, attacked by,    │
+│    best move, tactic) is checked by the engine; text is spoken only if all pass   │
 │ 8. Output safety check → text-to-speech → back to the app                         │
 │    Any failure at 4, 6, 7 or 8 → friendly template answer instead                 │
 └────────────────────────────────────────────────────────────────────────────────────┘
@@ -114,6 +115,11 @@ Child taps "Why?" / finishes a game / asks Pip
 ```json
 {
   "say": "Oh no! Your knight on f5 has no friends guarding it, and the pawn on g6 can take it.",
+  "claims": [
+    { "kind": "piece_on", "square": "f5", "detail": "white knight" },
+    { "kind": "undefended", "square": "f5", "detail": "" },
+    { "kind": "attacked_by", "square": "f5", "detail": "g6" }
+  ],
   "highlightSquares": ["f5", "g6"],
   "arrows": [["g6", "f5"]],
   "question": { "prompt": "Where could the knight go to be safe?", "answerSquares": ["d4", "e3"] }
@@ -134,8 +140,18 @@ import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
 
 const client = new Anthropic(); // reads credentials from the server environment
 
+const Claim = z.object({
+  kind: z.enum([
+    "piece_on", "defended", "undefended", "attacked_by",
+    "best_move", "is_check", "is_mate", "tactic",
+  ]),
+  square: z.string(),
+  detail: z.string(),
+});
+
 const CoachReply = z.object({
   say: z.string(),
+  claims: z.array(Claim), // every fact the sentence relies on
   highlightSquares: z.array(z.string()),
   arrows: z.array(z.tuple([z.string(), z.string()])),
   question: z
@@ -186,7 +202,7 @@ Production notes:
 | 1 | **Engine first, LLM last** | Most "Why?" answers are answered by templates filled with engine facts: free, instant, offline |
 | 2 | **Pre-generate** the explanation library in batch | Common positions and all puzzles never need a live call |
 | 3 | **Response cache** keyed by position + mistake type + track + language | Repeated situations (very common among beginners) reuse earlier answers |
-| 4 | **Prompt caching** of the frozen system prompt (1-hour cache) | Cached input is billed at about a tenth of the normal price; only the small facts block is billed in full |
+| 4 | **Prompt caching** of the frozen system prompt (1-hour cache) | On Claude Opus 5.5, cache reads cost about a twentieth of normal input ($0.20 vs $4 per million tokens). Writing the 1-hour cache costs more than normal input, so the saving depends on enough calls within each hour; measure the real hit rate |
 | 5 | **Low effort, short replies** | Explanations are 1–3 sentences; `effort: "low"` keeps thinking and output tokens small |
 | 6 | **Batch API** for reports, insights and content | About 50% cheaper for anything that isn't real-time |
 | 7 | **Start live coaching early** | Begin generating the game review during the end-of-game celebration, so it's ready when the child looks |
@@ -199,7 +215,9 @@ If templates, the library and the response cache answer about 90% of requests, a
 **about $0.20–$0.30 per child per month.**
 
 **Latency targets:** first spoken word within **2 seconds**. Pip shows a "thinking" animation while waiting; templates
-and library answers are instant.
+and library answers are instant. Claude Opus 5.5 always does some thinking, even at low effort, so the evaluation
+(13.9) also benchmarks **latency** for Claude Haiku 5.5 on short explanations. The reply is streamed, and text-to-speech
+starts on the first sentence; structured fields (claims, highlights) arrive with the full reply.
 
 ---
 
@@ -208,7 +226,7 @@ and library answers are instant.
 | Rule | How |
 |---|---|
 | **No free chat for the youngest** | Little Knights (5–7) never send free text or voice to the LLM. They get preset question buttons only |
-| **Opt-in for under-13s** | Ask Pip / Ask Nova and teach-back grading are off until a parent switches them on |
+| **Opt-in for under-13s** | *Every* live LLM feature (live Coach's Corner wording, "Tell me more", Socratic hints, Ask Pip / Ask Nova, teach-back grading) is off for under-13s until a parent switches it on. Without it, children get the engine templates and the reviewed library, which cover the same moments |
 | **Chess only** | The system prompt restricts topics; an input check redirects anything else: *"Let's talk chess! What do you want to know about your game?"* |
 | **No personal data** | Prompts contain only position facts, the age track and the language. No names, no device IDs; any typed text is scrubbed of names and numbers first |
 | **Grounded answers** | Every reply is validated against engine facts; failures are replaced by templates |
@@ -217,6 +235,9 @@ and library answers are instant.
 | **Minimal logs** | Logs are kept only for quality review with parental consent, are short-lived, and contain no identity |
 | **Data retention** | Confirm the data-retention options (including zero data retention) for the chosen model with Anthropic before launch |
 | **Human review** | All offline-generated content is reviewed by people before release |
+| **AI is labelled** | Live AI answers carry a small "✨ written by AI" marker and the parent hub explains it, meeting the EU AI Act transparency duties that apply from August 2026 |
+| **Usage-policy review** | Before launch, review Anthropic's usage policies for products used by minors and confirm the required safeguards, alongside the data-retention check |
+| **Third-party consent** | Sending any child-related data to an AI provider counts as disclosure to a third party under the 2025 COPPA rule changes, so it needs its own parental consent (see document 15) |
 | **Transparency** | The parent hub shows which AI features are on, and lets parents switch each off |
 
 ---

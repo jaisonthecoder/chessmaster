@@ -1,6 +1,6 @@
 # 12. Features & Screens Inventory
 
-Every screen and feature in the plan (documents 1–11), grouped by app area.
+Every screen and feature in the plan (documents 1–16). Every child screen has the voice assistant described in [document 16](16-voice-assistant-and-languages.md), grouped by app area.
 **Phase:** P1 = MVP, P2 = "Play and Improve", P3 = "Become a Master" (see [Roadmap](08-roadmap-and-delivery.md)).
 
 ## 12.1 Sitemap
@@ -27,13 +27,15 @@ App launch
 ### A. First launch and profiles
 | # | Screen | What it does | Phase |
 |---|---|---|---|
+| A0 | Language picker | Device language preselected; flag-and-face buttons for English, Malayalam, Hindi and Arabic, each speaking its own language | P1 |
 | A1 | Welcome (sleeping board) | Opens straight into the 3D world; no account, no text | P1 |
 | A2 | Sound check | "Tap the bell!" Detects muted sound and switches on subtitles and icons | P1 |
 | A3 | Age picker | Cakes with 5–15 candles, each spoken aloud; sets the guide (Pip or Coach Nova) | P1 |
 | A4 | Avatar picker | 8 cartoon faces; no names or photos | P1 |
 | A5 | "Do you know chess?" (8+) | 👍 / 🤔 / 👎, which routes to the placement quest or Level 1 | P1 |
-| A6 | Placement quest | 3 minutes, 12 adaptive 3D questions; can place a child at Levels 2–5 | P2 |
+| A6 | Placement quest | Any age, voice-led; 3 minutes, 12 adaptive 3D questions. P1 checks the rules (places up to Level 4); P2 extends it to Level 5 | P1 / P2 |
 | A7 | Who's playing? | Avatar faces for children sharing one device; "Add a friend" | P1 |
+| A8 | Parent setup and consent | From "I'm a grown-up": parent PIN, verifiable parental consent, optional account | P1 |
 
 ### B. Home
 | # | Screen | What it does | Phase |
@@ -41,6 +43,7 @@ App launch
 | B1 | Home | Pip, one big **▶ Continue** button, four doors (Learn, Practise, Play, My Trophies), "Today's adventure" progress ring | P1 |
 | B2 | Always-present helpers | ❓ Help (explains a different way), 🔁 Show me again, 🏠 Home (auto-saves) on every screen | P1 |
 | B3 | Grown-ups corner icon | Opens the parent gate | P1 |
+| B4 | Academy home (11–15) | Training dashboard: rating graph, today's plan, streaks, weak spots | P2 |
 
 ### C. Learn
 | # | Screen | What it does | Phase |
@@ -54,6 +57,8 @@ App launch
 | C7 | Boss Battle | 3 rounds (recall, apply, play), hearts (unlimited for 5–7) | P1 |
 | C8 | Practice Camp | After a failed boss: 2 targeted activities, then retry | P1 |
 | C9 | Level certificate | On-screen certificate, "Show a grown-up!" button | P1 |
+| C10 | Review Island | Mixed review of all earlier levels before the next kingdom opens | P1 |
+| C11 | Training Plan | Weekly rating-based plan after Level 10 (from Level 7 by choice) | P3 |
 
 ### D. Practise
 | # | Screen | What it does | Phase |
@@ -61,13 +66,15 @@ App launch
 | D1 | Practise hub | Cards for mini-games, puzzles, my mistakes and trainers | P1 |
 | D2 | Mini-games library | Unlocked games with best stars | P1 |
 | D3 | Mini-games (each its own screen) | Wake the Pieces, Who's Who?, File & Rank Catch, Board Map Quiz, Build the Army, Coordinate Rush, Star Collector, Knight's Quest, King's Walk, Pawn Wars, Hungry Pieces, Mate or Stalemate? | P1 |
-| D4 | More mini-games | Safe Square, Guard the Treasure, Fork Finder, Puzzle Rush Jr., Mini-Board Battles, King of the Hill | P2 |
+| D4 | More mini-games | Safe Square, Guard the Treasure, Fork Finder, Puzzle Dash Jr., Mini-Board Battles, King of the Hill | P2 |
 | D5 | Puzzle Gym | Adaptive puzzles (about 75% success target) and themed sets (forks, pins, mates…) | P2 |
 | D6 | Daily Puzzle | One puzzle a day, matched to the child | P2 |
 | D7 | Oops Replays | The child's own mistakes from games, turned into puzzles | P2 |
 | D8 | Review Queue | Concepts due for spaced review | P1 |
 | D9 | Trainers | Coordinate trainer (P1); Memory Board and Blind Knight visualisation (P3) | P1 / P3 |
 | D10 | Repertoire Builder | Spaced-repetition training of the child's opening lines (Level 7) | P3 |
+| D11 | Real Board Challenge | Set up the shown position on a real board, play the answer there, confirm in the app | P1 |
+| D12 | Endgame Trainer | Convert or hold key endgame positions against the engine | P2 |
 
 ### E. Play
 | # | Screen | What it does | Phase |
@@ -85,6 +92,9 @@ App launch
 | E11 | Tournament simulator | 5-round Swiss against bots with clock and scoresheet (Level 10) | P3 |
 | E12 | Analysis board | Free board, arrows, engine (Academy), PGN export | P3 |
 | E13 | AR board | Place a 3D board on a real table; Pip teaches on it; "shadow board" mode | P3 |
+| E14 | Referee mode | Helps with a game on a real board: enter moves, legality help, chess clock | P2 |
+| E15 | My games | History of the child's games, replay, export (PGN for Academy) | P1 |
+| E16 | Rated games (13+) | Opt-in, parent-approved games against other players aged 13+, no chat | P3 |
 
 ### F. My Trophies
 | # | Screen | What it does | Phase |
@@ -93,6 +103,9 @@ App launch
 | F2 | Collection / customise | Board themes, piece sets, Pip outfits, avatar (all earned, never bought) | P1 (2 themes), P2+ |
 | F3 | My progress (child view) | Map progress, "days played this week"; ratings for Academy | P1 |
 | F4 | Hall of Legends | Stories of great players with their famous moments as puzzles | P3 |
+| F5 | Quests | Daily and weekly quests | P2 |
+| F6 | Leaderboards | Friends and class only | P2 |
+| F7 | Friends | Friends added through invite codes and parent approval | P3 |
 
 ### G. System overlays
 | # | Screen | What it does | Phase |
@@ -107,6 +120,9 @@ App launch
 | G8 | Welcome back | Returning-child greeting + warm-up | P1 |
 | G9 | What's new | Pip shows new things, only when relevant | P2 |
 | G10 | Quick settings (child) | Sound, music, 2D/3D | P1 |
+| G11 | Language and voice | Change language (per profile), voice speed, subtitles | P1 |
+| G12 | Unlock ("ask a grown-up") | Shown when content needs a subscription; never interrupts a lesson | P2 |
+| G13 | Save my progress | Parent-gated prompt to link the profile to a parent account (QR or code) | P1 |
 
 ### H. Parent hub (behind the parent gate)
 | # | Screen | What it does | Phase |
@@ -119,6 +135,13 @@ App launch
 | H6 | Reports and certificates | Weekly report email, certificate PDFs, printable activity sheets, "play with your child" ideas | P2 |
 | H7 | Subscription | Free Levels 1–3; full academy subscription | P2 |
 | H8 | Privacy | Export and delete data | P1 |
+| H9 | Parent login and password reset | Email or social sign-in for parents | P1 |
+| H10 | Restore purchases and redeem codes | Required by the app stores; school and gift codes | P2 |
+| H11 | Help centre and support | FAQ, contact support, report a problem | P1 |
+| H12 | Legal and credits | Privacy policy, terms, open-source licences and credits | P1 |
+| H13 | Downloads and storage | Download or remove kingdoms and languages; storage used | P1 |
+| H14 | Delete account | Confirmation and what will be deleted | P1 |
+| H15 | Parent web dashboard and email digest | The parent hub on the web and phone, with a weekly email | P2 |
 
 ### I. Teacher / coach mode
 | # | Screen | What it does | Phase |
@@ -130,6 +153,10 @@ App launch
 | I5 | Projector mode | Large 3D board for demonstrations, whole-class quiz on tablets | P2 |
 | I6 | Class tournaments | Swiss or round-robin in class | P3 |
 | I7 | Lesson plans | Downloadable PDF per lesson | P2 |
+| I8 | Class sign-in | Picture passwords or QR badges for shared classroom devices | P2 |
+| I9 | Rostering and single sign-on | Google, Microsoft, Clever, ClassLink and OneRoster | P2 |
+| I10 | Projector live session | Join code, anonymised names, live answers and results | P2 |
+| I11 | Teacher verification | Confirms teacher accounts before class features unlock | P2 |
 
 ### J. Internal tools
 | # | Screen | What it does | Phase |
@@ -150,7 +177,8 @@ App launch
 | Explanation rotation | 3 explanation styles per concept, escalation path, "always end on a success" | P1 |
 | Scenario playbook | 60+ situation handlers (idle, random tapping, losing streak, returning after weeks…) | P1 |
 | Voice and audio | Two voice sets (Pip, Nova), subtitles, music, wooden sound effects | P1 |
-| Languages | English and Arabic (right-to-left) first, more later | P1 (English), P2 (Arabic) |
+| Voice assistant on every screen | Entry line, 🔊 say it again, long-press to hear, help, idle prompts, optional on-device voice commands; read-aloud for parent and teacher pages. See [document 16](16-voice-assistant-and-languages.md) | P1 |
+| Languages | English, Malayalam, Hindi and Arabic (right-to-left) at launch; more later | P1 |
 | Offline mode | Downloaded kingdoms work without internet; sync later | P1 |
 | Safety | No ads, no chat, no personal data, parent gate | P1 |
 | Rules coverage check | The build fails if any rule lacks a lesson, practice, question and boss item | P1 |

@@ -174,7 +174,7 @@ enemy piece, so the two kings can never stand next to each other. Special move: 
 **Teaching notes.** The hardest piece for young kids. Use three methods:
 1. *L-shape* with an animated trail.
 2. *Colour flip:* the knight always lands on the other colour.
-3. *Knight's flower:* from the centre, the 8 targets form a ring around a "skipped" 5×5 box.
+3. *Knight's flower:* draw a 5×5 box with the knight in the middle. The 8 targets are on the outer edge of that box, but never in its corners or the middle of its sides; the knight jumps right over the inner 3×3 ring.
 Mini-games: *Knight's Quest* (reach targets), *Knight vs Pawns*. Show that a knight in the corner has only 2 moves ("a knight on the rim is dim").
 
 ### 2.4.6 Pawn ♙
@@ -282,8 +282,10 @@ checkmating player **wins**.
 
 ### Stalemate
 **Rule.** The player to move is **not in check** but has **no legal move**. The game is a **draw**.
-**Kid version.** "Uh-oh! The King is NOT in danger, but nobody can move. That's *stalemate*, a tie! Be careful:
-when you're winning, always leave the enemy King a square to breathe."
+**Kid version.** "Uh-oh! It's their turn, their King is NOT in danger, but they have no legal move at all. That's
+*stalemate*, a tie! When you're winning, always make sure they still have a legal move, until you deliver checkmate."
+(Only the side *to move* is stuck; the other side may have plenty of moves. A king "with a square to breathe" isn't
+enough if that square is attacked, so check every one of their pieces.)
 
 **Teaching notes.** Side-by-side 3D comparison: same picture, one with check and one without. *Mate or Stalemate?*
 sorting game. Level 6 endgame lessons repeat the stalemate traps in K+Q vs K.
@@ -302,9 +304,9 @@ sorting game. Level 6 endgame lessons repeat the stalemate traps in K+Q vs K.
 | Type | Rule | Automatic or claimed |
 |---|---|---|
 | **Stalemate** | Side to move has no legal move and is not in check | Automatic |
-| **Dead position (insufficient material)** | No sequence of legal moves can lead to checkmate. For example: K vs K; K+B vs K; K+N vs K; K+B vs K+B with bishops on the same colour | Automatic |
+| **Dead position** | No sequence of legal moves can lead to checkmate. Usually insufficient material (K vs K; K+B vs K; K+N vs K; K+B vs K+B with bishops on the same colour), but also some fully blocked pawn positions where no breakthrough is possible | Automatic |
 | **Agreement** | Both players agree to a draw (event rules may restrict this) | By agreement |
-| **Threefold repetition** | The same position occurs 3 times with the same player to move and the same castling and en-passant rights (not necessarily consecutively) | Claimed by a player |
+| **Threefold repetition** | The same position occurs 3 times (not necessarily in a row). "Same position" means the same player to move, the same pieces on the same squares, and the same possible moves, including castling rights; an en-passant right only counts if the capture is actually legal | Claimed by a player |
 | **Fivefold repetition** | The same position occurs 5 times | Automatic |
 | **50-move rule** | 50 moves by each player without any pawn move or capture | Claimed by a player |
 | **75-move rule** | 75 moves by each player without any pawn move or capture (unless the last move was checkmate) | Automatic |
@@ -324,8 +326,10 @@ These game points are different from **piece values** (pawn = 1, queen = 9…), 
 
 **Notes.**
 - K+N+N vs K is **not** a dead position (mate is *possible* if the defender blunders, even though it can't be forced). It doesn't end automatically.
-- In the app's casual games, threefold repetition and the 50-move rule are applied **automatically** for kids under 11,
-  with an explanation pop-up. The Academy track teaches *claiming* a draw, as in real tournaments.
+- **Timeout and mating material:** a player who runs out of time *loses* if the opponent could still checkmate by any series of legal moves, even an unlikely one. Example: if you have a king and a pawn and your opponent has a king and a knight, mate is possible, so a timeout loses. If you have only a king, a lone knight can't mate, so it's a draw.
+- A **second illegal move** loses the game, except that it is a draw if the opponent has no possible way to checkmate.
+- **In the app**, every track claims draws the real way: when a repetition or the 50-move rule applies, the guide says *"You can claim a draw! Tap here to claim it,"* and explains it. Fivefold repetition and the 75-move rule end the game automatically, as in the FIDE Laws.
+- **Engine limitation:** chess.js detects insufficient material but not blocked-pawn dead positions. The rules layer adds a blocked-position detector (see [Technical Architecture](07-technical-architecture.md)).
 
 ---
 
@@ -361,11 +365,13 @@ The app teaches these in Level 10 ("Tournament Player") with a role-play "Arbite
 | x | Captures | Bxe5, exd5 (pawn captures are named by file) |
 | + | Check | Qh5+ |
 | # | Checkmate | Qf7# |
-| O-O / O-O-O | Kingside / queenside castling | |
+| 0-0 / 0-0-0 (FIDE scoresheets) · O-O / O-O-O (PGN files) | Kingside / queenside castling | |
 | =Q | Promotion | e8=Q |
 | e.p. | En passant (optional suffix) | exd6 e.p. |
-| Disambiguation | When two identical pieces can reach the square | Nbd2, R1e2 |
+| Disambiguation | When two identical pieces can reach the square: add the file, else the rank, else both | Nbd2, R1e2, Qh4e1 |
 | 1-0, 0-1, ½-½ | White wins, Black wins, draw | |
+
+**Localised piece letters** (for example Spanish R = rey, D = dama) are for display only. Exported PGN always uses the English letters K Q R B N.
 
 **Annotation symbols** (Academy track): `!` good, `!!` brilliant, `?` mistake, `??` blunder, `!?` interesting,
 `?!` dubious.
@@ -384,7 +390,9 @@ export their games as PGN in the Academy track.
 | **Blitz** | 10 minutes or less (for example, 3 + 2) |
 | **Bullet** (online only, not a FIDE category) | Under 3 minutes |
 
-- **Increment (Fischer):** seconds added after each move. **Delay (Bronstein/US delay):** the clock waits before counting down.
+- **Increment (Fischer):** seconds added after each move.
+- **Simple (US) delay:** at the start of each move, the clock waits a few seconds before counting down.
+- **Bronstein delay:** the clock counts down normally; after the move, the time used is added back, up to the delay amount.
 - For time categories, the total includes 60 × increment (for example, 10 min + 5 s counts as 15 minutes, which is rapid).
 - In the app, kids under 11 play **without clocks** by default. Clocks are introduced gently in Level 10.
 
@@ -392,9 +400,10 @@ export their games as PGN in the Academy track.
 
 ## 2.12 Ratings, titles and the path to mastery
 
-- **Elo rating:** a number measuring playing strength. FIDE publishes official ratings. Beginners start around 1000–1400 when they enter rated play.
-- **FIDE titles** (open): Candidate Master (CM, 2200), FIDE Master (FM, 2300), International Master (IM, 2400 plus norms), **Grandmaster (GM, 2500 plus three norms)**.
-- **Women's titles:** WCM (2000), WFM (2100), WIM (2200), WGM (2300). Girls may pursue open titles too.
+- **Elo rating:** a number measuring playing strength. FIDE publishes official ratings. Since March 2024 the lowest FIDE rating is 1400 (lower ratings were raised), so newly rated players start at 1400 or above. National and online ratings use different scales.
+- **FIDE titles** (open): Candidate Master (CM, 2200), FIDE Master (FM, 2300), International Master (IM, 2400 plus norms), **Grandmaster (GM, 2500 plus norms covering at least 27 games)**. CM and FM can also be earned through results in some youth and continental events.
+- **Women's titles:** WCM (2000), WFM (2100), WIM (2200 plus norms), WGM (2300 plus norms). Girls may pursue open titles too.
+- *Title requirements change; content owners re-check the FIDE Handbook (title regulations) every year.*
 - **Youth pathway:** school and club tournaments, then national age-group championships (U8, U10, U12, U14, U16…), then continental and world youth championships.
 - The app's Level 10 explains this pathway, and the parent hub links to national federations and local clubs.
   *Titles are for inspiration: the app never promises outcomes.*
@@ -416,6 +425,23 @@ export their games as PGN in the Academy track.
 
 ---
 
+## 2.13a Common rule myths (taught in Lesson 3.15)
+
+Many children arrive with "house rules" learned from family or friends. The app corrects them kindly.
+
+| Myth | The real rule |
+|---|---|
+| "You must say *check*." | Saying check is optional. |
+| "A pawn can only become a piece that was captured." | A pawn may promote to any queen, rook, bishop or knight, so you can have two queens. |
+| "You can castle to get out of check." | You can never castle while in check. |
+| "Stalemate is a win for the player who is stuck." | Stalemate is a draw. |
+| "You win by capturing the king." | The king is never captured. The game ends at checkmate. |
+| "A pawn can move two squares any time." | Only on its first move. |
+| "The queen goes on the opposite colour." | The queen starts on her own colour. |
+| "If you touch a piece by accident you must move it." | Only a deliberate touch counts; say "I adjust" first when straightening. |
+| "Once your king has been in check, you can never castle." | You can still castle later, as long as the king and that rook have not moved (and the other castling conditions are met). |
+| "You can't move into a check if it's only a pawn attacking." | You can never move into check, whatever the attacker. |
+
 ## 2.14 Rules-engine edge cases (QA checklist)
 
 Every case must have an automated test. The rules engine (chess.js) is also validated with *perft* move-count tests.
@@ -432,9 +458,14 @@ Every case must have an automated test. The rules engine (chess.js) is also vali
 10. A king cannot capture a protected piece.
 11. Double check: only king moves are legal.
 12. Stalemate positions involving pinned pieces.
-13. Repetition counting requires identical castling and en-passant rights.
+13. Repetition counting compares possible moves: castling rights count; an en-passant right counts only when the capture is legal.
 14. The 50-move counter resets on any pawn move or capture.
 15. Insufficient material detection, including K+B vs K+B with same-coloured bishops.
 16. Timeout with the opponent having only a king is a draw.
 17. Two kings can never be adjacent.
 18. Multiple queens after promotion; 3D piece pools must support up to 9 queens per side.
+19. Timeout when the opponent has only a knight or bishop but the player who ran out still has pawns or pieces: a loss, not a draw.
+20. Blocked-pawn dead positions (no legal sequence leads to mate) are drawn.
+21. Second illegal move when the opponent has no mating material: a draw.
+22. Fivefold repetition and the 75-move rule end the game automatically; threefold and 50-move need a claim.
+23. Lesson positions without kings (practice boards) must load in "playground" mode, never in game mode.

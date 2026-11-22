@@ -16,18 +16,20 @@ REWARD     – stars, sticker, XP, unlock
 [LK] [EX] [AC] – line variants for Little Knights / Explorers / Academy
 ```
 
-> **Voice sets (after critique round 1):** only two voice sets are recorded: **Pip** (LK and EX) and **Nova** (AC).
-> Explorers reuse the LK voice lines with subtitles; [EX] variants change practice difficulty, rewards and
-> on-screen text, not the recording. Every lesson must also follow the self-guided rules in
+> **Voice policy (after critique rounds 1 and 2):** there are two *guide* voice sets: **Pip** (LK and EX) and **Nova** (AC).
+> Explorers reuse the LK guide lines with subtitles; [EX] variants change practice difficulty, rewards and
+> on-screen text, not the recording. The **supporting cast** (King Bram, Queen Stella, Captain Rook, Sparky,
+> Bishop Bo, bosses and bots) is recorded once per language and shared by every track. Every lesson must also follow the self-guided rules in
 > [document 11](11-self-guided-learning.md): a question every 30–60 seconds, three explanation styles per concept,
 > a "Spot Pip's mistake" item, and a teach-back at the end.
 
 **The lesson rhythm (every lesson):**
+0. **Remember?** (≤ 30 s): one retrieval question from an earlier lesson.
 1. **Hook** (≤ 20 s): a story moment or a question.
 2. **Watch** (I do): the character demonstrates in 3D.
 3. **Try** (we do): a guided move with highlighted hints.
 4. **Practise** (you do): 3–6 tasks of increasing difficulty, with hints available.
-5. **Check:** 3 quick questions; this is the mastery data.
+5. **Check:** at least 5 quick items of at least 2 question types; 4 of 5 correct masters the lesson. This is the mastery data.
 6. **Celebrate and connect:** reward, plus "next time…" teaser.
 
 **Hint ladder** (used in all INTERACT steps):
@@ -43,10 +45,12 @@ REWARD     – stars, sticker, XP, unlock
 | Character | Role | Voice direction |
 |---|---|---|
 | **Pip the Pawn** | Main guide (5–10). A small, brave pawn who dreams of reaching the last rank and becoming a Queen. His journey mirrors the child's | Warm, excited, curious; age about 8; never sarcastic |
-| **Captain Rook** | Co-guide (8–10). A friendly tower-captain, strong and steady | Hearty, a little pirate-ish |
+| **Captain Rook** | Supporting character in every track, and co-guide for Explorers (8–10). A friendly tower-captain, strong and steady. Never an opponent | Hearty, a little pirate-ish |
 | **Queen Stella** | Appears at milestones; the "goal" Pip dreams of | Kind, regal, encouraging |
 | **King Bram** | Comic relief; a slightly nervous, very important king | Fussy and funny ("Careful! I'm VERY important!") |
 | **Sparky the Knight** | A jumpy horse who never walks straight | Energetic, giggly |
+| **Bishop Bo** | A gentle bishop who loves his colour and never leaves it | Calm, kind |
+| **Bosses and bots** | Friendly rivals at each kingdom gate and in the Play Zone (never the guides) | Playful, never scary or mean; no taunting |
 | **Coach Nova** | Academy guide (11–15). A young titled player and coach | Clear, respectful, a bit witty, treats teens as players |
 
 ---
@@ -88,8 +92,8 @@ INTERACT Tap the King you must protect.
 PIP     "I have a secret dream… If I march all the way to the other side,
          I can become a QUEEN! Will you help me get there?"
 INTERACT Big "YES!" button (Pip hugs camera).
-REWARD  ⭐⭐⭐ + sticker "Chess Land Visitor". Map: path to "The Magic Board" lights up.
-PIP     "Next time, I'll show you the magic board's secrets!"
+REWARD  ⭐⭐⭐ + sticker "Chess Land Visitor". Map: path to "Your Magic Board" lights up.
+PIP     "Next time, I'll show you how to wake us up and move us!"
 ```
 
 **[EX] variant:** same scene; Pip's lines are shortened and shown as subtitles. Captain Rook adds:
@@ -233,7 +237,7 @@ REWARD  ⭐⭐⭐ + sticker "World Traveller".
 
 ---
 
-## 4.7 Lesson 1.9 — "Every House Has an Address" (coordinates)
+## 4.7 Lesson 1.9 — "Every Square Has an Address" (coordinates)
 
 ```
 SCENE   Board viewed from directly above (top-down mode). Each file is a coloured lane.
@@ -290,7 +294,7 @@ reading a diagram from a book page and seeing the board from Black's side.
 SCENE   Empty board; pieces wait in a toy chest beside it.
 PIP     "Time to build our army! First — turn the board the right way.
          Light on the right!"
-INTERACT Rotate the board (swipe) until the bottom-right corner is light.
+INTERACT Tap the turn-board button 🔄 (it turns the board a quarter at a time) until the bottom-right corner is light.
   ✔ SUCCESS  Corner square twinkles. "Light on the right!" chant with a little drum beat.
 CAPTAIN ROOK "Towers go in the corners — that's us rooks!"
 INTERACT Drag both Rooks to a1/h1.
@@ -361,7 +365,7 @@ INTERACT (Try)   Knight's Quest: Sparky starts on g1, carrot on f7. Optimal rout
 ACTION  Sparky in corner a1 looks sad, only 2 flowers.
 SPARKY  "In the corner I only have two jumps… I feel dim! A knight on the rim is dim!"
 INTERACT (Practise) 4 quests with increasing distance; one includes enemy-attacked squares to avoid.
-INTERACT (Check)  "Tap ALL the squares Sparky can jump to" (from d4) / "Can Sparky reach the light square?"
+INTERACT (Check)  "Tap ALL the squares Sparky can jump to" (from d4) / "Can Sparky reach the light square in ONE jump?"
 REWARD  ⭐⭐⭐ + sticker "Horse Whisperer".
 ```
 **[AC] note:** Coach Nova explains the knight as the "non-linear piece", shows the forking geometry in advance, and mentions the knight's tour as an optional challenge.
@@ -383,7 +387,7 @@ PIP     "Oh no! Someone's in front of me. I can't push him and I can't capture h
 ACTION  Pip bumps, nothing happens. "I'm stuck!"
 [Lesson 2.12 continues]
 PIP     "But pawns have a secret: we fight SIDEWAYS — diagonally forward!"
-ACTION  Black knight appears on d4. Pip slashes diagonally (cartoon swoosh), captures; knight
+ACTION  Black knight appears on f4. Pip slashes diagonally (cartoon swoosh), captures; knight
         bows politely and walks off-board to the "bench". [LK: no violence, pieces 'go home']
 INTERACT Capture puzzles: 4 positions; one includes a piece straight ahead (trap question).
   ✘ RETRY  (tries to capture straight ahead) PIP: "Remember: we march straight, but fight diagonally!"
@@ -405,8 +409,9 @@ PIP     "Number one: RUN! Move the King to a safe square."
 ACTION  Safe squares glow green, attacked squares red (e2 red: still on the laser line).
 INTERACT Move the King to safety.  ✘ (onto e2) King: "Still on the laser! Owie!" — red flash, undo.
 PIP     "Number two: CAPTURE the attacker!"
-ACTION  Reset; add a white Bishop on h5 — it can reach e8 along the diagonal.
+ACTION  Reset; add a white Bishop on h5. It can reach e8 along the diagonal h5–g6–f7–e8.
 INTERACT Capture the checking piece.
+ACTION  Reset: Black Rook e8 checks the White King on e1 again. White now also has a Knight on c3 and a Bishop on f1.
 PIP     "Number three: BLOCK! Put someone in the way, like a shield."
 INTERACT Drag a piece onto the laser line (multiple correct squares).
 ACTION  Shield animation; laser stops at the blocker.
@@ -511,16 +516,18 @@ ACTION  Repeat scene; this time the child is told to make another move first. Th
         a "poof" and a clock-tick sound.
 PIP     "The ghost only stays for ONE turn. Now or never!"
 INTERACT (Practise) 6 yes/no positions ("Can White capture en passant?"), 3 of them tricky:
-         pawn moved only one square; pawn moved two but last turn; pawn not adjacent.
+         pawn moved only one square; pawn moved two squares, but not on the last move; pawn not beside it.
 REWARD  ⭐⭐⭐ + "Ghost Catcher" badge.
 ```
 
 ---
 
-## 4.18 Lesson 5.2 — "The Knight Fork" (Explorers / Academy)
+## 4.18 Lesson 5.3 — "Forks: the Royal Fork and the Family Fork" (Explorers / Academy)
 
 ```
-SCENE   Tactics Jungle. White: Kg1, Nb5, pawns. Black: Ke8, Ra8, pawns. White to move: Nc7+ forks King and Rook.
+SCENE   Tactics Jungle. FEN r3k3/pp3ppp/8/1N6/8/8/PPP2PPP/6K1 w - - 0 1
+        (White: Kg1, Nb5, pawns a2 b2 c2 f2 g2 h2. Black: Ke8, Ra8, pawns a7 b7 f7 g7 h7.)
+        White to move: Nc7+ is a royal fork of King and Rook; nothing can capture the knight on c7.
 CAPTAIN ROOK "A fork attacks TWO things at once — like a fork with two prongs picking up two peas!"
 ACTION  Knight jumps to c7; two red attack-lines spring to King and Rook; fork prongs graphic.
 CAPTAIN ROOK "The King must escape check… and then — snap! — we take the Rook."
@@ -591,7 +598,9 @@ VICTORY  Boss bows, gate opens, map camera flies to the next kingdom; certificat
 
 ## 4.22 Voice-over and localisation notes
 
-- Record each line in two voice sets: Pip (LK, reused by EX with subtitles) and Nova (AC). That is about 2,700 lines per language for the full curriculum, down from about 4,000 with three sets.
-- Keep lines under 12 words for the Little Knights track, and pause for interaction.
-- Launch languages: English and Arabic (right-to-left UI, with board orientation unchanged). Later: Spanish, French, Hindi, Urdu, Mandarin.
+- Record the two guide voice sets (Pip, Nova) plus the shared supporting cast. Including wrong-answer feedback for each error type, three explanation styles per concept, boss and bot lines, and scenario-playbook lines, the full curriculum needs an estimated **6,000–8,000 recorded lines per language** (re-estimate once Levels 1–3 are scripted).
+- Dynamic text (square names, AI explanations, library explanations) uses **one text-to-speech voice per guide**, designed to sound close to the recorded guide and always marked as Pip's or Nova's "reading voice".
+- Mouth movements (visemes) for every recorded line are generated automatically from the audio (for example with the open-source Rhubarb Lip Sync tool) and checked by the animator.
+- Keep lines under 12 words for the Little Knights track, and pause for interaction. The scripts in this document are drafts written for readability: before recording, every LK line longer than 12 words is split into shorter lines with pauses.
+- Launch languages: **English, Malayalam, Hindi and Arabic** (Arabic with a right-to-left UI; the board is never mirrored). Later: for example Urdu, Tamil, Spanish, French. Voice and language rules for every screen are in [document 16](16-voice-assistant-and-languages.md).
 - Piece names follow each language's chess terminology. Algebraic piece letters are localised (for example, Spanish uses R=Rey, D=Dama), with an option to show the international letters.

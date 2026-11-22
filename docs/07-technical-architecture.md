@@ -23,7 +23,7 @@ described in [document 6](06-3d-visual-audio-design.md), and the browser removes
 | Backend | **Supabase** (Postgres, Auth, Storage, Edge Functions) or Node.js (NestJS) + Postgres | Accounts, progress sync, classrooms, content delivery |
 | Content delivery | CDN for the 3D asset packs and audio | Fast streaming of kingdom packs |
 | 3D content pipeline | **Blender** → glTF 2.0 (Draco/meshopt, KTX2) | Industry standard, open format |
-| Analytics | Self-hosted, privacy-first (for example, PostHog self-hosted with child mode; no third-party ad SDKs) | Child-privacy compliance |
+| Analytics | First-party, privacy-reviewed event pipeline (events sent to our own backend and stored in Postgres or a warehouse we control); no third-party analytics or ad SDKs in the child app | Required by app-store kids-category rules and children's privacy law |
 
 **Alternative:** **Unity** (URP) if the product becomes native-first and needs console-level effects.
 Trade-offs: heavier downloads, a weaker web build, and different skills needed. The web-first approach is
@@ -63,7 +63,7 @@ recommended for the MVP.
 | Module | Responsibility |
 |---|---|
 | `board3d` | Board and piece rendering, themes, picking (raycast), drag and drop, overlays (dots, arrows, heat maps), camera rigs, quality tiers |
-| `chess-core` | Wrapper around chess.js: legal moves, special-move events (castle, en passant, promotion), draw detection, FEN/PGN, variants (mini-boards, Pawn Wars) |
+| `chess-core` | Two layers. **Game layer:** chess.js for standard games (legal moves, special moves, FEN/PGN) plus our own rules for what chess.js lacks (fivefold repetition, the 75-move rule, claim-vs-automatic draws, timeout vs mating material, blocked-pawn dead positions). **Playground layer:** our own move generator for lesson positions without kings, mini-boards (4×4–6×6), Pawn Wars, capture-all, King of the Hill and Chess960 castling |
 | `engine` | Stockfish worker; bot personalities (skill level, depth, blunder probability, style); hint generation; game review classification (best, good, inaccuracy, mistake, blunder) |
 | `lesson-runtime` | Loads lesson files, runs the XState machine, plays VO and animations, validates INTERACT steps, emits mastery events |
 | `minigames` | Each mini-game as a plugin sharing `board3d` and `chess-core` |
@@ -123,7 +123,7 @@ steps:
 ```
 
 A **lesson editor** (an internal web tool) lets designers set up positions on a 3D board, record steps, preview
-the lesson in all three tracks, and validate that every position is legal (through `chess-core`).
+the lesson in all three tracks, and validate every position (through `chess-core`): game positions must be fully legal; playground positions (for example a lone rook) are checked against the playground rules for that lesson.
 
 ## 7.5 Puzzles and content
 
@@ -134,7 +134,9 @@ the lesson in all three tracks, and validate that every position is legal (throu
 
 ## 7.6 Bots and engine
 
-- Stockfish runs in a Web Worker so the UI never freezes. The lite NNUE build is used on low-end devices.
+- Stockfish runs in a Web Worker so the UI never freezes. The default is a **single-threaded lite build**, loaded lazily the first time it's needed. Multi-threaded builds need SharedArrayBuffer, which requires cross-origin isolation headers (COOP/COEP); these are hard to guarantee inside Capacitor and are used only on the web build where the headers are set. Full-size NNUE networks (tens of MB) are an optional download for Academy analysis.
+- Very weak bots (Bumble, Fizz, Rocky) use our own heuristics rather than Stockfish skill levels, which don't play convincingly human below about 800; they are tuned through play-tests.
+- **Licence:** Stockfish is GPLv3. It is kept as a separate, replaceable component with its source published; see [document 15](15-business-legal-compliance.md) before shipping.
 - **Bot personality** = `{ skillLevel, depth, moveTimeMs, blunderRate, preferCaptures, preferChecks, openingBook }`.
   Low-level bots pick from engine-ranked candidate moves with weighted randomness, so they make *human-like* mistakes (such as leaving a piece hanging) rather than perfect moves followed by random blunders.
 - **Kid-language review:** engine evaluations are converted by rules into explanations, for example:
@@ -147,8 +149,9 @@ the lesson in all three tracks, and validate that every position is legal (throu
 
 ```
 Account (parent | teacher)        id, email, role, consent_status, locale
-ChildProfile                      id, account_id, nickname, avatar, birth_year, track, settings
-                                  (no surname, no email, no photo)
+ChildProfile                      id, account_id (optional), avatar_id, age_band, track, settings
+                                  (no name, no email, no photo; a certificate name is typed by a parent
+                                  into the PDF on the device and never stored)
 Classroom                         id, teacher_id, name, join_code
 ClassMembership                   classroom_id, child_id
 LessonProgress                    child_id, lesson_id, stars, attempts, best_accuracy, completed_at
@@ -164,7 +167,8 @@ Assignment                        id, classroom_id, content_ref, due_at
 - **COPPA** (US), **GDPR / GDPR-K** (EU), **UK Age Appropriate Design Code**, **UAE PDPL** and local equivalents.
 - **Play first, no account:** a child can start alone. Local profiles hold only an avatar, an age band and progress, all stored on the device, with no network identity.
 - A parent or teacher account (with verifiable parental consent) is needed only for cloud sync, classrooms, purchases and reports. It sits behind the parent gate. Child profiles never store personal data (nickname + birth year only).
-- No ads, no third-party trackers, no data selling. Analytics are anonymised and aggregated.
+- No ads, no third-party trackers, no data selling. Analytics events carry a random profile ID, which is *pseudonymous*, not anonymous: under GDPR it is personal data and under COPPA it is a persistent identifier. It is covered by the privacy notice, the data-protection impact assessment (DPIA) and parental consent. Reports to staff are aggregated.
+- The full privacy and compliance workstream (COPPA 2025 rule changes, GDPR age of consent by country, school privacy law, app-store kids rules) is in [document 15](15-business-legal-compliance.md).
 - **No free-text chat.** Friend games use invite codes, with preset emotes only ("Good game!", "Nice move!").
 - Data is encrypted in transit (TLS) and at rest; the region is chosen by the account's locale.
 - Content moderation for any user-generated content (for example, custom puzzles shared in classrooms).
@@ -208,3 +212,36 @@ chessmaster/
 | Performance | A device lab (low, mid and high tiers) + automated frame-time capture | FPS budgets, memory, load time |
 | Accessibility | axe-core + manual screen-reader passes | WCAG 2.2 AA for the UI |
 | Usability | Moderated play-tests with kids in each age band (with parental consent) | Comprehension, fun, frustration points, and **adult-intervention count** (target: zero; see [11](11-self-guided-learning.md)) |
+
+## 7.11 Additions from critique round 2
+
+### Storage that doesn't disappear
+- Safari deletes website storage (including IndexedDB) after 7 days without use for sites not added to the home screen, and any browser can evict storage under pressure. A local-only profile could vanish.
+- The web build calls `navigator.storage.persist()` and asks families to add the app to the home screen; the iOS and Android apps store progress in native storage (SQLite through Capacitor), not in WebView storage.
+- After Level 1, a parent-gated **"Save my progress"** prompt offers to link the profile to a parent account (QR code or short code on the parent's phone). Profiles can also be exported and imported as a file.
+
+### Sync and content versioning
+- The same profile on two devices merges by rules per field: stars and badges keep the best value; mastery estimates replay the answer log in time order; spaced-repetition schedules take the most recent review.
+- Lesson IDs and concept IDs never change between releases. When a lesson is rewritten, its ID keeps pointing at the same concept, and mastery data migrates with a versioned migration script.
+
+### Realtime service (P2–P3)
+Friend games, class tournaments and the projector quiz need a realtime layer: WebSocket channels (for example Supabase Realtime), presence, reconnection, server-side move validation (the server runs `chess-core`), clocks kept by the server, and basic fair-play checks.
+
+### Observability
+Crash and error reporting is self-hosted (for example a self-hosted Sentry instance) with personal-data scrubbing, because third-party SDKs are not allowed in kids-category apps. Product analytics use the first-party pipeline from 7.1, with an event list reviewed for privacy (no free text, no identifiers beyond a random profile ID).
+
+### Speech
+Voice answers use only speech recognition that runs on the device (for example Apple's on-device recognition in the iOS app, or a small bundled model). Browser speech APIs that send audio to a server are not used. The feature is off by default and parent-enabled.
+
+### Devices supported
+| Platform | Minimum | Notes |
+|---|---|---|
+| iPad / iPhone | iOS 16+ (WebGL2, WebAssembly SIMD) | App Store build via Capacitor |
+| Android phones and tablets | Android 9+ with a current WebView | Google Play build |
+| Amazon Fire tablets | Fire OS 7+ | Amazon Appstore build; no Google services |
+| Chromebooks | ChromeOS current | Web app (PWA); "stream only" mode for small disks |
+| Windows / macOS | Current Chrome, Edge, Safari, Firefox | Web app; keyboard play supported |
+| Electronic boards (P3) | Bluetooth boards with open protocols | Real-board play with automatic move entry |
+
+### Licences
+A licence register lists every library, engine, model, font, sound, 3D model, HDRI and music track with its licence (for example chess.js: BSD-2; Stockfish: GPLv3; Lichess puzzle database: CC0; GSAP: its own no-charge licence, not open source). The app has an "Open-source licences and credits" screen. Details in [document 15](15-business-legal-compliance.md).

@@ -26,15 +26,18 @@ The first 2 minutes, step by step. **No account, no typing, no reading.**
 
 | Step | What the child sees and hears | What the child does |
 |---|---|---|
-| 1 | The app opens on the sleeping chessboard. A bell rings. Pip: *"Can you hear me? Tap the bell!"* | Taps the bell. (If there's no tap within 10 s, the bell wiggles and glows. If the sound seems off, subtitles and an animated hand appear: "Turn up the sound 🔊") |
-| 2 | Pip: *"Hi! I'm Pip! How old are you? Tap the cake with your number of candles!"* Cakes with 5, 6, 7 … 15 candles; each says its number aloud when touched | Taps a cake → sets the track (Pip for 5–10, Coach Nova for 11–15). The age can be changed later behind the parent gate |
+| 0 | The app picks its language from the device settings. A row of flag-and-face buttons is shown; each speaks a greeting in its language when touched: *"Tap the friend who talks like you!"* | Taps a language (the device language is preselected, so a single tap continues) |
+| 1 | The app opens on the sleeping chessboard. A bell rings. Pip: *"Did you hear the bell? Tap the thumbs-up!"* 👍 / 👎 | 👍 continues. 👎, or no tap within 10 s, turns on subtitles and picture cues and shows an animated "turn up the sound 🔊" hint. (A web page can't detect a muted device, so we ask; the native apps also read the system volume.) |
+| 2 | Pip: *"Hi! I'm Pip! How big are you?"* Three pictures: a small child, a middle child, a tall child, plus a small "I'm a grown-up" button. Then the chosen group shows only its 3–5 birthday cakes (5–7, 8–10, 11–15), each saying its number aloud | Two taps set the age band and the track (Pip for 5–10, Coach Nova for 11–15). "I'm a grown-up" opens parent setup. The age can be changed later behind the parent gate |
 | 3 | Pip: *"Pick your face!"* Eight cartoon avatars (no photos, no names typed) | Taps an avatar → creates a local profile. Several kids on one device = several avatar faces on the start screen |
-| 4 | Ages 8+: Pip or Nova: *"Do you already know how chess pieces move?"* 👍 Yes · 🤔 A little · 👎 Not yet | "Yes" or "a little" → 3-minute placement quest. "Not yet" → Level 1 |
-| 5 | Lesson 1.1 starts immediately. The child touches a piece within **30 seconds** of first launch | Plays |
+| 4 | Any age: Pip or Nova: *"Do you already know how chess pieces move?"* 👍 Yes · 🤔 A little · 👎 Not yet (voice-only for 5–7) | "Yes" or "a little" → 3-minute placement quest. "Not yet" → Level 0 (ages 5–6) or Level 1 |
+| 5 | The first activity starts immediately. The child touches a piece within **30 seconds** of first launch | Plays |
 
-**What a parent does (optional, any time):** a small "Grown-ups" corner icon opens the **parent gate** (a task an adult can do but a
-young child can't, such as "Press and hold the 3 and the 7 together", announced only in text). Behind it: settings,
-time limits, cloud sync and account, reports, purchases. **Learning never requires it.**
+**What a parent does (optional, any time):** a small "Grown-ups" corner icon opens the **parent gate** (a check that a young child can't pass). There are two strengths:
+- **Simple gate** (a written instruction such as "Press and hold the 3 and the 7 together") for opening links and help pages only.
+- **Parent PIN** (set by the parent at setup, or linked to the parent account) for time limits, purchases, AI features and account settings, because readers aged 8–15 could pass a simple gate.
+
+Behind the gate: settings, time limits, cloud sync and account, reports, purchases. **Learning never requires it.**
 
 **Privacy:** without an account, everything stays on the device: an avatar, a birth-year band, and progress. No
 personal data, no network calls carrying identity. This keeps "play first" compatible with children's privacy laws.
@@ -50,7 +53,7 @@ personal data, no network calls carrying identity. This keeps "play first" compa
 | **Max 3 choices on a screen** | For ages 5–7, never more than 3 answer options. For 8+, never more than 4 |
 | **Icons + voice for every button** | Long-press any button to hear what it does |
 | **Always-present helpers** | Bottom corner on every screen: **❓ Help** (Pip explains a different way), **🔁 Show me again** (replays the demo), **🏠 Home** (progress is saved first) |
-| **Big targets, forgiving touch** | 48 dp minimum; pieces snap to the nearest legal square when dropped near it; a mis-tap on an empty square does nothing (no penalty) |
+| **Big targets, forgiving touch** | 48 dp minimum for buttons. **In lessons only**, a piece dropped very close to its target snaps onto it. **In games**, an illegal drop springs back, and older players can switch on move confirmation. A mis-tap on an empty square does nothing (no penalty) |
 | **Tap-tap or drag** | Both work everywhere. Young children are shown tap-tap first (it's easier for small hands) |
 | **No text-dependency for 5–7** | Subtitles are off by default; numbers are spoken; coordinates use picture letters |
 | **Plain words** | ≤ 12 words per sentence for ages 5–10. Technical words come after the idea: *"…grown-ups call this castling."* |
@@ -126,7 +129,7 @@ Every concept is authored with **at least three explanation styles**. Hints rota
 | **Pawn moves vs captures** | Pip marches forward bravely but fights sideways with his little sword | Forward arrow (move) vs diagonal swords (capture) | "Walk straight, fight diagonal" |
 | **Check** | The king hears an alarm: danger! | A red laser from the attacker to the king | "Run, Capture, Block!" with 3 icons |
 | **Checkmate** | The king is trapped in a room with no doors | Every escape square turns red, one by one | "Check + no escape = checkmate" |
-| **Stalemate** | The king is safe but stuck: nobody can move, so it's a tie | Same picture as mate but without the laser | "No check + no moves = tie" |
+| **Stalemate** | It's their turn, the king is safe, but they have no legal move at all, so it's a tie | Same picture as mate but without the laser | "No check + no moves = tie" |
 | **Castling** | The king's secret door into his castle | Animated door; checklist lights | "King two steps, rook jumps over" |
 | **En passant** | The ghost pawn left behind when a pawn runs past | A translucent ghost on the skipped square that fades after one turn | "Now or never!" |
 | **Promotion** | Pip's dream of becoming a queen | Column of light, transformation | "Reach the end, pick a new piece" |
@@ -150,7 +153,7 @@ The child **always ends on a success**, and the next question is an easy win.
 | Scenario | App response |
 |---|---|
 | First launch, nobody helping | See 11.2. Voice-first, no account, in a lesson within 30 s |
-| Sound is off or muted | Detected through the "tap the bell" step: an animated 🔊 hint, subtitles turn on automatically, icons pulse |
+| Sound is off or muted | Found by asking "Did you hear the bell?" (and, in the native apps, by reading the system volume): an animated 🔊 hint, subtitles and picture cues turn on, icons pulse |
 | Child can't read | Default for ages 5–7. Every instruction is voiced, and long-press on anything repeats it |
 | Child returns the next day | Pip greets them by avatar, does a 1-minute "Remember?" warm-up (spaced review), then ▶ Continue |
 | Child returns after 2+ weeks | A longer friendly warm-up (5 questions) across recent concepts. Weak concepts are revisited before new content |
@@ -192,7 +195,7 @@ The child **always ends on a success**, and the next question is an easy win.
 | Loses | Encouragement (*"Every champion loses. Let's see one thing to learn!"*), a review of 1 key moment, a rematch or easier bot offered |
 | Loses 3 in a row | Automatic easier bot + suggestion of a short related lesson. No "you lost" counters |
 | Wins 3 in a row easily | Suggest the next bot; for older kids, introduce a rating |
-| Repetition or 50-move situation (Explorers and younger) | Draw applied automatically with a simple explanation pop-up. Academy players learn to claim it |
+| Repetition or 50-move situation | The guide says *"You can claim a draw! Tap here if you want a tie,"* with a short explanation, as in real chess for every age. Fivefold repetition and the 75-move rule end the game automatically |
 | Insufficient material (for example, K vs K) | Automatic draw: *"Nobody can checkmate any more, so it's a tie!"* |
 | Wants to stop mid-game | **Save for later** or **Resign** (explained: *"Resigning means you give up this game. That's OK!"*) |
 | Wants to play a parent or friend | Pass-and-play on one device; the board turns around; the coach explains to both players |
@@ -206,6 +209,11 @@ The child **always ends on a success**, and the next question is an easy win.
 | Missed several days | No guilt messages. *"I missed you! Ready for an adventure?"* Streaks count "days this week", not consecutive days |
 | Finishes a level | Celebration, certificate on screen, *"Show a grown-up!"* button (opens the trophy view; optional) |
 | Fails a Boss | Practice Camp: 2 short targeted activities, then retry. The boss "remembers" and cheers: *"You came back stronger!"* |
+| Fails the same Boss 3 or more times | An alternative route: a different, easier set of practice activities, a "helper" bonus heart, and a gentle note in the parent report suggesting they play a game together |
+| Stuck on the same level for weeks (Levels 7–10) | Training Plan suggests a different kind of practice (endgames instead of openings, model games instead of puzzles) and celebrates small gains |
+| Upset by a bot's reaction | Bots never taunt. Cheeky characters only joke about themselves ("Oops, I left my knight!"). Any line can be reported by a parent and removed |
+| Always wants to play White | The guide encourages alternating ("Champions can play both colours!"); bots alternate colours by default |
+| Believes a wrong "house rule" | The guide explains the real rule kindly and points to "Chess Myths Busted!" (Lesson 3.15) |
 
 ### E. Technical
 | Scenario | App response |
@@ -214,6 +222,10 @@ The child **always ends on a success**, and the next question is an easy win.
 | Screen rotated | The board re-centres; portrait and landscape are both supported |
 | Audio fails to load | Subtitles + icon animations + vibration feedback |
 | App updated mid-progress | Progress migrates automatically; a "What's new" visit from Pip, only if it's relevant to the child |
+| App sent to the background during a Boss | The Boss pauses and resumes exactly where it was; no hearts are lost |
+| Device reinstalled or replaced | If the profile was linked to a parent account, it restores in one tap. If not, the parent-gated "Save my progress" prompt after Level 1 is the protection (see document 7) |
+| Device clock changed to dodge a time limit | Limits use the parent account's server time when online, and the app's own play-time counter when offline |
+| A sibling plays on the wrong avatar | The behaviour signals from scenario A suggest "Is this you?"; a parent can move recent progress between profiles in the parent hub |
 
 ### F. Safety
 | Scenario | App response |
@@ -221,13 +233,22 @@ The child **always ends on a success**, and the next question is an easy win.
 | Child taps something that would cost money, open a link, or change settings | Parent gate. The child sees a friendly *"Ask a grown-up for this one!"* |
 | Child wants to play online with strangers | Not possible. Friend games need invite codes and parent approval |
 | Child wants to type their name | Never asked. Avatars only |
+| Taps Resign or Home by accident | Resign always needs a second, clearly different confirmation ("Are you sure? 🏳️ / Keep playing ♟"). Home saves the game first |
 
-### G. Memory and mastery
+### G. Accessibility
+| Scenario | App response |
+|---|---|
+| Deaf or hard-of-hearing child | Visual-only demonstration mode: every spoken line has a picture-and-animation version, captions with icons, and vibration feedback. Sign-language videos for key concepts in supported languages (later phase) |
+| Blind or low-vision child | Audio chess mode: squares and moves are announced, moves are entered by voice (on-device) or keyboard, and a tactile-board companion guide is offered |
+| Motor difficulties | Tap-tap only (no dragging needed), larger squares in 2D mode, adjustable touch hold time, switch-access support |
+
+### H. Memory and mastery
 | Scenario | App response |
 |---|---|
 | Forgets an old rule | Spaced repetition notices the weak concept → it appears in "Remember?" warm-ups and in Boss rounds |
 | Revisits an old level by choice | Allowed any time; stars can be improved |
 | Already knows the rules | Placement quest; Levels 1–3 can be passed in about 10 minutes through "Prove it!" challenges |
+| Wants the app to referee a real-board game | **Referee mode:** the child taps (or, with an electronic board, plays) the moves of a real game; the guide answers "Can I castle here?", spots illegal moves, and runs a chess clock |
 
 ---
 
@@ -240,7 +261,7 @@ The child **always ends on a success**, and the next question is an easy win.
 | < 60% correct or 3 wrong in a row | Too hard | Switch explanation style, easier variant, smaller board, more guided steps |
 | Rapid taps, long idle, early exits | Frustration or disengagement | Mini-game break, easier win, shorter session suggestion |
 
-- Every lesson has a **"Too easy? Prove it!" ⚡ button** (8+) that runs the lesson's check questions immediately. Passing it completes the lesson.
+- Every lesson has a **"Too easy? Prove it!" ⚡ button** (any age; voice-led for 5–7) that runs the lesson's check questions immediately. Passing it completes the lesson.
 - The **placement quest** (3 minutes, 12 adaptive questions on a 3D board) can place an experienced child directly at Levels 2–5.
 
 ---
@@ -264,7 +285,7 @@ a check question, and coverage in a Boss or coached game. Missing coverage fails
 | Board map: centre, kingside, queenside, halves, back ranks, edges, corners | 1.10 | Board Map Quiz | Tap it, Pick one | L1 Boss |
 | 2D diagrams and symbols; the board from Black's side | 1.11 | Who's Who? (2D round) | Pick one, Tap it | L1 Boss |
 | Initial setup, queen on her colour | 1.12 | Build the Army: Speed Run | Spot Pip's mistake (queen and king swapped) | L1 Boss |
-| White moves first; moves, turns and captures | 1.13 | First coached game | Thumbs up / down | L3 game |
+| White moves first; moves, turns and captures | 1.13 | Taking-turns practice board (two pieces only) | Thumbs up / down | L1 Boss, L3 game |
 | Rook movement and blocking | 2.1, 2.3 | Star Collector | Tap all, Count it | L2 Boss |
 | Bishop movement; colour-bound | 2.4 | Star Collector (impossible stars) | Why?, Thumbs up / down | L2 Boss |
 | Queen movement | 2.6 | Hungry Pieces | Tap all | L2 Boss |
@@ -274,13 +295,13 @@ a check question, and coverage in a Boss or coached game. Missing coverage fails
 | Pawn diagonal capture; no straight capture | 2.12 | Pawn Wars | Spot Pip's mistake | L2 Boss |
 | Can't capture own pieces; can't jump (except the knight) | 2.3 | Star Collector | Thumbs up / down | L2 Boss |
 | Piece values (points) | 2.14, 4.1 | Hungry Pieces | Pick one (best capture), Count it | L2 Boss, L4 Boss |
-| Game points: win 1, draw ½, loss 0; how results are written | 3.12 | Tournament table game | Count it, Pick one | L3 Boss |
+| Game points: win 1, draw ½, loss 0; how results are written | 3.14 | Tournament table game | Count it, Pick one | L3 Boss |
 | Check: recognising it | 3.1 | Is It Check? | Thumbs up / down | L3 Boss, coached games |
 | Escaping check: run, capture, block | 3.2 | Escape drills | Why?, Move it | L3 Boss |
 | Knight / pawn checks can't be blocked | 3.2 | Escape drills | Why? | L3 Boss |
 | Double check: only the king can move | 3.2 (8+) | Escape drills | Move it | L3 Boss |
 | Can't move into check; pinned pieces can't move off the line | 3.3 | Safe moves | Spot Pip's mistake | L3 Boss |
-| A pinned piece can still give check | 5.3 (Academy) | Pin puzzles | Thumbs up / down | L5 Boss |
+| A pinned piece can still give check | 5.4 | Pin puzzles | Thumbs up / down | L5 Boss |
 | Checkmate | 3.4, 3.5 | Mate-in-1 Ladder | Sort it, Move it | L3 Boss |
 | Stalemate = draw | 3.6, 3.7 | Mate or Stalemate? | Sort it, Why? | L3 Boss, L6 endgames |
 | Castling: how (both sides) | 3.8 | Castle drills | Move it | L3 Boss |
@@ -288,20 +309,27 @@ a check question, and coverage in a Boss or coached game. Missing coverage fails
 | Castling: rook may pass an attacked b1/b8 | 3.8 (8+) | Castle drills | Thumbs up / down | L3 Boss (Explorers and Academy) |
 | Castling rights lost after a king or rook move | 3.8 | Castle drills | Why? | L3 Boss |
 | Promotion: must promote; Q/R/B/N; several queens possible | 3.9 | Pawn Wars | Pick one, Predict | L3 Boss |
-| Underpromotion (knight check; avoiding stalemate) | 6.x (Explorers and Academy) | Promotion puzzles | Move it | L6 Boss |
+| Underpromotion (knight check; avoiding stalemate) | 6.12 | Promotion puzzles | Move it | L6 Boss |
 | En passant: how; only the very next move | 3.10 | Ghost-pawn set | Thumbs up / down (with trick items) | L3 Boss |
-| En passant illegal if it exposes the king | 3.10 (Academy) | Ghost-pawn set | Why? | L5 Boss |
-| Draw: dead position / insufficient material | 3.11 | Draw sorting | Sort it | L3 Boss |
-| Draw: threefold / fivefold repetition | 3.11 (8+), 10.3 | Repetition demo | Predict | L10 Arbiter Academy |
-| Draw: 50 / 75-move rule | 3.11 (8+), 10.3 | Counter demo | Thumbs up / down | L10 Arbiter Academy |
-| Draw by agreement | 3.11, 10.4 | — | Pick one | L10 |
-| Timeout vs no mating material = draw | 10.2 | Clock games | Why? | L10 tournament |
-| Win by resignation or timeout | 3.11, 10.2 | Coached games | Pick one | L10 tournament |
-| Touch-move, "I adjust", completing a move | 10.3 | Arbiter role-play | Spot Pip's mistake | L10 Boss |
-| Illegal-move penalties | 10.3 | Arbiter role-play | Pick one | L10 Boss |
-| Notation (all symbols) | 10.1 (introduced from Level 4 for Academy) | Notation drills | Name it | L10 Boss |
-| Clocks and time controls | 10.2 | Clock games | Pick one | L10 tournament |
-| Etiquette and sportsmanship | 10.4 | Role-play | Pick one | L10 |
+| En passant illegal if it exposes the king | 3.10 (advanced step, unlocked by skill) | Ghost-pawn set | Why? | L5 Boss |
+| Draw: dead position / insufficient material (and blocked pawns, 8+) | 3.13 | Draw sorting | Sort it | L3 Boss |
+| Draw: threefold (claim) / fivefold (automatic) repetition | 3.13, 10.5 | Repetition demo | Predict | L10 Arbiter Academy |
+| Draw: 50-move (claim) / 75-move (automatic) rule | 3.13, 10.5 | Counter demo | Thumbs up / down | L10 Arbiter Academy |
+| Draw by agreement; offering a draw correctly | 3.12, 10.5 | Coached games | Pick one | L3 Boss, L10 |
+| Timeout: loss if the opponent could still mate by any legal moves; draw if not | 3.12, 10.2 | Clock games | Why? | L10 tournament |
+| Win by resignation or timeout | 3.12, 10.2 | Coached games | Pick one | L3 Boss, L10 tournament |
+| Touch-move, "I adjust", completing a move | 3.16 (basics), 10.4 | Arbiter role-play | Spot Pip's mistake | L10 Boss |
+| Illegal-move penalties (including pressing the clock without moving, promotion-piece rules) | 10.4 | Arbiter role-play | Pick one | L10 Boss |
+| Notation (all symbols) | 4.19 (Explorers and Academy; voice-only for Little Knights), 10.1 scoresheets | Scoresheet Scribe | Name it | L4 Boss, L10 Boss |
+| Clocks and time controls (increment, simple and Bronstein delay) | 4.20 (basics), 10.2 | Clock Challenge | Pick one | L10 tournament |
+| Etiquette and sportsmanship | 0.7, 3.16, 10.7 | Role-play | Pick one | L3 Boss, L10 |
+| Discovered check, check by promotion, check by castling | 3.11 | Sneaky Check Spotter | Tap it | L3 Boss |
+| Common rule myths | 3.15 | Myth Buster | Thumbs up / down | L3 Boss |
+| Playing on a real board (touch-move, one hand, handshake) | 3.16 | Real Board Challenge | Teach-back on a real board | L3 Boss |
+| Scoresheet rules (never write a move in advance; under-5-minute exception) | 10.1 | Scoresheet Scribe | Spot Pip's mistake | L10 Boss |
+| Draw offers and claims: correct procedure | 10.5 | Arbiter Says | Pick one | L10 Boss |
+| Rapid and blitz rule differences | 10.6 | Arbiter Says | Pick one | L10 Boss |
+| Chess960 setup and castling | 10.18 (optional) | Chess960 games | Move it | — |
 
 ---
 
@@ -318,3 +346,23 @@ a check question, and coverage in a Boss or coached game. Missing coverage fails
 
 A child who only ever taps **▶ Continue** will complete the entire curriculum in the right order, with review built in.
 That is the core test of a self-guided design.
+
+---
+
+## 11.11 Moving from Pip to Nova
+
+The guide is chosen by age band, but children change. The rules:
+- A birthday never switches the guide in the middle of a level. At the next level boundary, the child (and, if linked, the parent) is asked: *"Do you want to keep learning with Pip, or meet Coach Nova?"*
+- Choosing Nova plays a short hand-over scene: Pip introduces Nova and says goodbye. Pip stays available as an optional "buddy" in the corner.
+- A parent can choose either guide at any age in the parent hub (for example Nova for a mature 9-year-old, or Pip for a 12-year-old beginner).
+
+## 11.12 Strong young children
+
+A 6-year-old can be a strong player. Skill unlocks content at any age, and Little Knights get adapted versions of advanced material:
+- Notation is spoken ("Knight to f3"), and picture scoresheets show piece icons instead of letters.
+- Opening lessons use arrows and animations instead of move lists.
+- A parent can switch on Nova's voice and full text at any age.
+
+## 11.13 Asking "why?" after teach-back
+
+For ages 7 and up, every teach-back ends with one "Why?" question (pick the reason from 2–3 pictures). Getting the move right is not enough to master a concept; the child must also pick the right reason.

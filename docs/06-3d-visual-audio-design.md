@@ -60,7 +60,7 @@ Captured pieces are placed neatly beside the board, so the child can always see 
 
 ## 6.6 Augmented reality mode (phase 3)
 
-- WebXR on Android Chrome; native ARKit and ARCore through the Capacitor plugin on iOS and Android.
+- **Re-scoped after critique round 2:** iOS WebViews do not support WebXR, and no Capacitor plugin renders the Three.js scene in ARKit. Phase 3 AR therefore starts on **Android only** (WebXR in Chrome / ARCore). iOS AR needs a separate native rendering module and is a later, separately estimated project.
 - Place a life-size board on a real table. Kids walk around it, and Pip stands on the table to teach.
 - "Shadow board" mode: the app shows the moves while the child plays them on their own physical set.
 
@@ -68,14 +68,14 @@ Captured pieces are placed neatly beside the board, so the child can always see 
 
 - **Two ways to move:** tap-tap (select, then target) and drag-and-drop. Both are always supported.
 - **Taught, not assumed:** Lesson 1.2 ("Your Magic Board") teaches every board interaction before any chess rule, and its rules table (see [Lesson Scripts](04-lesson-scripts.md)) is the single source of truth for selection behaviour.
-- **Large touch targets:** a minimum of 48 dp. The board is at least 90% of the screen width on phones in portrait.
+- **Large touch targets:** a minimum of 48 dp for buttons. On phones (about 360 dp wide) a full board gives squares of only about 40 dp, and the 3D tilt shrinks the far ranks further, so phones default to a **steep, almost top-down camera** (or 2D), and a tapped square is magnified briefly so small fingers can confirm the target. Tablets keep the 3/4 view.
 - **Move confirmation** (optional, Academy) to train careful play; **undo** allowed in practice mode only.
 - Input: touch, mouse, keyboard (square navigation with arrow keys + Enter for accessibility), stylus.
 - Left-handed layout option (the UI panel can be mirrored).
 
 ## 6.8 Audio
 
-- **Voice-over:** professional child-friendly actors per character and language; subtitles.
+- **Voice-over:** professional actors for the two guide voices and the shared supporting cast, per language (adult performers for child voices, with contracts that forbid voice cloning; see [document 15](15-business-legal-compliance.md)); subtitles.
 - **Music:** an adaptive soundtrack per kingdom. Calmer during puzzles; it swells for boss fights and celebrations. Separate volume sliders.
 - **Sound effects:** recorded with real wooden pieces for authenticity, plus a magical layer for LK and EX.
 - **Spatial audio** in AR mode.
@@ -100,5 +100,8 @@ Captured pieces are placed neatly beside the board, so the child can always see 
 
 - glTF 2.0 assets compressed with Draco or meshopt; KTX2/Basis textures.
 - Each piece set ≤ 15k triangles in total (with LODs); board ≤ 5k triangles.
-- Initial download ≤ 25 MB; each kingdom streams its own asset pack (≤ 15 MB).
+- Initial download ≤ 25 MB, including a single-threaded "lite" chess engine; each kingdom streams its own asset pack (≤ 15 MB).
+- **Total storage budget:** about 250 MB with all kingdoms and one language downloaded; a downloads manager lets parents and schools remove kingdoms or languages. School Chromebooks can use a "stream only" mode.
+- **WebGL robustness:** recover automatically from a lost WebGL context (common on iOS under memory pressure); if WebGL2 is missing or keeps failing, switch to the 2D board automatically.
+- **Battery saver:** lower frame rate and effects when the battery is low or the device is hot.
 - Automatic quality detection on the first launch, plus a manual override.
