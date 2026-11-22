@@ -31,6 +31,7 @@ becoming a titled chess master.
 | 14 | [Critique Round 2](docs/14-critique-round-2.md) | Full independent inspection (121 findings) and everything added or fixed as a result |
 | 15 | [Business, Legal & Compliance](docs/15-business-legal-compliance.md) | Product name, licences, children's privacy, app-store kids rules, schools, business model, launch checklist |
 | 16 | [Voice Assistant & Languages](docs/16-voice-assistant-and-languages.md) | The voice assistant on every screen; English, Malayalam, Hindi and Arabic; chess terms per language; right-to-left rules |
+| 17 | [Mobile App Readiness](docs/17-mobile-app-readiness.md) | How the web app becomes iPhone, iPad, Android and Fire apps without a rewrite: architecture rules, platform adapter, store requirements, build pipeline |
 
 ## At a glance
 

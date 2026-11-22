@@ -180,6 +180,8 @@ Assignment                        id, classroom_id, content_ref, due_at
 chessmaster/
 ├── apps/
 │   ├── client/                 # React + R3F PWA (also wrapped by Capacitor)
+│   │   ├── ios/                # Capacitor iOS project (built by CI from day one)
+│   │   └── android/            # Capacitor Android project (also used for Amazon Fire)
 │   ├── lesson-editor/          # internal authoring tool
 │   └── admin/                  # content & user admin
 ├── packages/
@@ -188,6 +190,7 @@ chessmaster/
 │   ├── engine/                 # stockfish worker + bot personalities + review
 │   ├── lesson-runtime/         # XState interpreter for lesson files
 │   ├── adaptive/               # mastery model, SRS, puzzle selection
+│   ├── platform/               # platform adapter: storage, audio, speech, purchases, haptics… (web + native)
 │   └── ui/                     # shared design system (buttons, dialogs, HUD)
 ├── content/
 │   ├── lessons/                # YAML lesson scripts (level-x/...)
