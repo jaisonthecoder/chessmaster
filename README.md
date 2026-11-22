@@ -16,7 +16,7 @@ becoming a titled chess master.
 | # | Document | What it covers |
 |---|----------|----------------|
 | 1 | [Product Vision](docs/01-product-vision.md) | Goals, audiences, age tracks, design principles, safety, success metrics |
-| 2 | [Chess Rules Reference](docs/02-chess-rules-reference.md) | Complete rules of chess (based on the FIDE Laws of Chess), with kid-friendly explanations, teaching notes and rules-engine edge cases |
+| 2 | [Chess Rules Reference](docs/02-chess-rules-reference.md) | Complete rules of chess (based on the FIDE Laws of Chess), how points are calculated to FIDE standards (game points, tiebreaks, ratings), kid-friendly explanations, teaching notes and rules-engine edge cases |
 | 3 | [Curriculum & Levels](docs/03-curriculum-and-levels.md) | The 10-level learning path, worlds map, every lesson, mini-game and "boss battle" |
 | 4 | [Lesson Scripts](docs/04-lesson-scripts.md) | Screenplay-style scripts: what the character says, what the 3D scene does, what the child does, feedback on right and wrong answers |
 | 5 | [Teaching Method & Engagement](docs/05-teaching-method-and-engagement.md) | Teaching techniques, adaptive learning, gamification, parent and teacher tools |
@@ -43,7 +43,8 @@ becoming a titled chess master.
 - **Eleven levels:** Pip's Playroom (pre-chess skills for ages 5–6) → Board Explorer → Piece Master → Rules Champion →
   First Gamer → Tactics Cadet → Endgame Builder → Opening Navigator → Strategist → Combination Master → Tournament Player,
   then an ongoing Training Plan.
-- **177 lessons (214 activities), 37 mini-games, 101 screens, and more than 5,000 adaptive puzzles in the full curriculum.**
+- **180 lessons (217 activities), 41 mini-games, 103 screens, and more than 5,000 adaptive puzzles in the full curriculum.**
+- **Points taught to the international (FIDE) standard:** piece values, game points (1, ½, 0), byes and forfeits, tournament tiebreaks (Buchholz, Sonneborn-Berger and others), and FIDE rating calculation, each with worked examples.
 - **3D:** a real-board feel (wood, marble, soft shadows, physical piece motion), with a one-tap switch to
   a 2D top-down view and an optional augmented-reality (AR) board on the kitchen table.
 - **Recommended stack:** TypeScript + React Three Fiber (Three.js) + chess.js + Stockfish (WebAssembly),

@@ -294,8 +294,14 @@ a check question, and coverage in a Boss or coached game. Missing coverage fails
 | Pawn move; first-move double step; blocked pawns | 2.11 | Pawn Wars | Predict, Thumbs up / down | L2 Boss |
 | Pawn diagonal capture; no straight capture | 2.12 | Pawn Wars | Spot Pip's mistake | L2 Boss |
 | Can't capture own pieces; can't jump (except the knight) | 2.3 | Star Collector | Thumbs up / down | L2 Boss |
-| Piece values (points) | 2.14, 4.1 | Hungry Pieces | Pick one (best capture), Count it | L2 Boss, L4 Boss |
-| Game points: win 1, draw ½, loss 0; how results are written | 3.14 | Tournament table game | Count it, Pick one | L3 Boss |
+| Piece values (points) and counting material | 2.14, 4.1 | Hungry Pieces, Who's Ahead? | Pick one (best capture), Count it | L2 Boss, L4 Boss |
+| Piece points are not game points | 3.14 | Score Keeper | Spot Pip's mistake | L3 Boss |
+| Forfeits and byes (full, half, zero point) | 10.9 | Score Keeper | Pick one | L10 Boss |
+| Tournament tables and tiebreaks (direct encounter, Buchholz, Cut-1, Median, Sonneborn-Berger, wins, progressive) | 10.10 | Tiebreak Detective | Count it | L10 Boss |
+| Team scoring: match points vs board points | 10.10 | Score Keeper | Count it | L10 Boss |
+| Rating points: expected score, K-factor, rating change | 10.11 | Rating Predictor | Count it | L10 Boss |
+| Performance rating, first rating, rating floor | 10.12 | Rating Predictor | Count it, Pick one | L10 Boss |
+| Game points: win 1, draw ½, loss 0; how results are written; adding up a tournament table | 3.14 | Tournament table game | Count it, Pick one | L3 Boss |
 | Check: recognising it | 3.1 | Is It Check? | Thumbs up / down | L3 Boss, coached games |
 | Escaping check: run, capture, block | 3.2 | Escape drills | Why?, Move it | L3 Boss |
 | Knight / pawn checks can't be blocked | 3.2 | Escape drills | Why? | L3 Boss |
@@ -329,7 +335,7 @@ a check question, and coverage in a Boss or coached game. Missing coverage fails
 | Scoresheet rules (never write a move in advance; under-5-minute exception) | 10.1 | Scoresheet Scribe | Spot Pip's mistake | L10 Boss |
 | Draw offers and claims: correct procedure | 10.5 | Arbiter Says | Pick one | L10 Boss |
 | Rapid and blitz rule differences | 10.6 | Arbiter Says | Pick one | L10 Boss |
-| Chess960 setup and castling | 10.18 (optional) | Chess960 games | Move it | — |
+| Chess960 setup and castling | 10.21 (optional) | Chess960 games | Move it | — |
 
 ---
 

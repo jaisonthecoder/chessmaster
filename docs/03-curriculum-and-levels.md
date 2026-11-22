@@ -128,7 +128,7 @@ Pieces are taught in a proven order: **Rook → Bishop → Queen → King → Kn
 | 3.11 | 🎬 **Sneaky Checks** | Spot discovered checks, checks by a newly promoted piece, and checks given by castling |
 | 3.12 | 🎬 **How a Game Ends** | Checkmate, resigning, running out of time, offering and accepting a draw |
 | 3.13 | 🎬 Other Ways to Draw | Dead position, repetition, 50-move rule, agreement, and how to *claim* a draw |
-| 3.14 | 🎬 **Game Points: Win, Draw, Lose** | Win = 1, draw = ½, loss = 0; how 1-0, 0-1 and ½-½ are written; tournament scores |
+| 3.14 | 🎬 **Game Points: Win, Draw, Lose** | Win = 1, draw = ½, loss = 0; how 1-0, 0-1 and ½-½ are written; add up a mini tournament table; piece points vs game points are different things |
 | 3.15 | 🎬 **Chess Myths Busted!** | Wrong "house rules": you must say check; you can only promote to a captured piece; you can castle out of check; stalemate is a win; you capture the king |
 | 3.16 | 🎬 **Playing on a Real Board** | Touch-move, "I adjust", one hand, shake hands, say "Good game!", raise your hand for help |
 | 3.17 | 🎮 **Real Board Challenge** | The app shows a position; the child sets it up on a real board and plays the answer there (see 3.4) |
@@ -138,7 +138,7 @@ Pieces are taught in a proven order: **Rook → Bishop → Queen → King → Kn
 ### Level 4 — Battle Fields (First Gamer)
 | # | Lesson / activity | Objective |
 |---|---|---|
-| 4.1 | 🎬 Good Trades and Bad Trades | Use piece values (2.14) to decide whether an exchange is good |
+| 4.1 | 🎬 Good Trades and Bad Trades | Count the material for both sides (who is ahead, and by how many points) and use piece values (2.14) to decide whether an exchange is good |
 | 4.2 | 🎬 Is It Safe? (Hanging Pieces) | Attacked vs defended pieces |
 | 4.3 | 🎬 **Count Attackers and Defenders** | Work out whether a capture wins material |
 | 4.4 | 🎬 Attack and Defend | Making threats, defending pieces |
@@ -310,17 +310,20 @@ Basic mates with two rooks, queen + rook and queen + king are already in Level 4
 | 10.6 | 🎬 **Rapid and Blitz Rule Differences** | What changes at faster time controls |
 | 10.7 | 🎬 Etiquette, Sportsmanship, **Phones and Fair Play** | Conduct; why a phone can lose you the game |
 | 10.8 | 🎬 **Your First Tournament Day** | Registering, the pairings sheet, finding your board, reporting the result, byes, what to bring, resting between rounds |
-| 10.9 | 🎬 **Swiss Pairings and Tiebreaks** | How pairings work; Buchholz and Sonneborn-Berger |
-| 10.10 | 🎬 Analysing Your Own Games | Self-analysis method |
-| 10.11 | 🎬 Using an Engine the Right Way | Engine discipline |
-| 10.12 | 🎬 Building an Opening Repertoire | Preparation |
-| 10.13 | 🎬 **Preparing for a Specific Opponent** | Studying an opponent's games |
-| 10.14 | 🎬 **Playing for a Win vs Holding a Draw** | Match situation and risk |
-| 10.15 | 🎬 Tournament Psychology: Nerves, Focus, Bouncing Back | Mindset |
-| 10.16 | 🎬 **Online Chess, Safely and Fairly** | No engines, no rating manipulation, protect your privacy, be kind |
-| 10.17 | 🎬 Ratings, Titles, Your **FIDE ID** and Your Chess Journey | Joining your national federation; the pathway (2.12) |
-| 10.18 | 🎬 **Chess960: Beyond Memorisation** (optional) | Random starting positions and their castling rule |
-| 10.19 | 🤖 Simulated tournament (Swiss system, 5 rounds vs bots, with a clock and scoresheet) | Full rehearsal |
+| 10.9 | 🎬 Swiss Pairings, **Byes and Forfeits** | How pairings work; full-point, half-point and zero-point byes; forfeit wins |
+| 10.10 | 🎬 **Tournament Tables and Tiebreaks** | Read a crosstable and calculate Buchholz, Buchholz Cut-1, Median Buchholz, Sonneborn-Berger, direct encounter, number of wins and progressive score; team match points vs board points |
+| 10.11 | 🎬 **How Ratings Work: Calculating Elo Points** | Expected score from the FIDE table, K-factor (40 / 20 / 10), rating change = K × (score − expected) |
+| 10.12 | 🎬 **Performance Rating, First Ratings and Norms** | Performance = average opponent rating + dp; how a first FIDE rating is calculated; the 1400 rating floor; what a title norm is |
+| 10.13 | 🎬 Analysing Your Own Games | Self-analysis method |
+| 10.14 | 🎬 Using an Engine the Right Way | Engine discipline |
+| 10.15 | 🎬 Building an Opening Repertoire | Preparation |
+| 10.16 | 🎬 **Preparing for a Specific Opponent** | Studying an opponent's games |
+| 10.17 | 🎬 **Playing for a Win vs Holding a Draw** | Match situation and risk |
+| 10.18 | 🎬 Tournament Psychology: Nerves, Focus, Bouncing Back | Mindset |
+| 10.19 | 🎬 **Online Chess, Safely and Fairly** | No engines, no rating manipulation, protect your privacy, be kind |
+| 10.20 | 🎬 Ratings, Titles, Your **FIDE ID** and Your Chess Journey | Joining your national federation; the pathway (2.12) |
+| 10.21 | 🎬 **Chess960: Beyond Memorisation** (optional) | Random starting positions and their castling rule |
+| 10.22 | 🤖 Simulated tournament (Swiss system, 5 rounds vs bots, with a clock and scoresheet) | Full rehearsal |
 | 👑 | **Final Boss: The Grandmaster Tower Challenge** | Certificate: *ChessMaster Academy Graduate* |
 
 ### After Level 10 — Training Plan mode
@@ -378,6 +381,10 @@ Between kingdoms, a small **Review Island** mixes questions from *all* earlier l
 | Scoresheet Scribe | Notation | 4, 10 | Write down moves as they are played |
 | Clock Challenge | Clock handling | 4, 10 | Move, then press the clock with the same hand, under time pressure |
 | Arbiter Says | Tournament rules | 10 | Decide what the arbiter rules in short scenes |
+| Who's Ahead? | Counting material | 2, 4 | Count both sides' piece points in 10 seconds |
+| Score Keeper | Game and tournament points | 3, 10 | Fill in a tournament table from game results and find the winner |
+| Tiebreak Detective | Tiebreaks | 10 | Two players are tied: calculate the tiebreaks and decide who ranks higher |
+| Rating Predictor | Rating points | 10 | Predict the rating change after a game, then check it with the FIDE formula |
 
 
 ### 3.4.1 Mini-game rules (core games)

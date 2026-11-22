@@ -84,6 +84,9 @@ Chess vocabulary varies by region. Where a traditional word and a commonly used 
 | Castling | कैसलिंग | കാസ്‌ലിംഗ് | التبييت |
 | Promotion | प्रमोशन | പ്രൊമോഷൻ | الترقية |
 | En passant | एन पासां | ആൻ പസാന്ത് | الأخذ في المرور (confirm) |
+| Point / half point | अंक / आधा अंक | പോയിന്റ് / അര പോയിന്റ് | نقطة / نصف نقطة |
+| Rating | रेटिंग | റേറ്റിംഗ് | التصنيف |
+| Tiebreak | टाई-ब्रेक | ടൈ-ബ്രേക്ക് | كسر التعادل (confirm) |
 
 Characters' names stay the same in every language (Pip, Nova, Sparky…), written in each script: पिप / പിപ് / بيب.
 
@@ -171,6 +174,7 @@ Entry lines are shown in English; each is written and recorded in all four langu
 | E14 Referee mode (new) | "Playing on a real board? Tell me the moves and I'll be your referee." | — |
 | E15 My games (new) | "Here are your games. Tap one to watch it again." | — |
 | E16 Rated games, 13+ (new) | Nova: "Rated game. No chat; good luck and have fun." | — |
+| E17 Tournament table (new) | "Here's the table. Tap any number and I'll explain how it was worked out." | — |
 
 ### F. My Trophies
 | Screen | Entry line | Short |
@@ -182,6 +186,7 @@ Entry lines are shown in English; each is written and recorded in all four langu
 | F5 Quests (new) | "Today's quest: [quest]." | — |
 | F6 Leaderboards (new) | "Here's how your class is doing this week." | — |
 | F7 Friends (new) | "These are your chess friends." | — |
+| F8 Rating calculator (new) | Nova: "Enter your results and I'll calculate your rating change the FIDE way." | — |
 
 ### G. System
 | Screen | Entry line |

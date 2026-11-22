@@ -95,6 +95,7 @@ App launch
 | E14 | Referee mode | Helps with a game on a real board: enter moves, legality help, chess clock | P2 |
 | E15 | My games | History of the child's games, replay, export (PGN for Academy) | P1 |
 | E16 | Rated games (13+) | Opt-in, parent-approved games against other players aged 13+, no chat | P3 |
+| E17 | Tournament table and tiebreaks | Live crosstable in the tournament simulator and class tournaments, with a tap-to-explain for every tiebreak calculation | P2 |
 
 ### F. My Trophies
 | # | Screen | What it does | Phase |
@@ -106,6 +107,7 @@ App launch
 | F5 | Quests | Daily and weekly quests | P2 |
 | F6 | Leaderboards | Friends and class only | P2 |
 | F7 | Friends | Friends added through invite codes and parent approval | P3 |
+| F8 | Rating calculator (Academy) | Enter opponents' ratings and results to see expected scores, rating change and performance, using FIDE's tables | P3 |
 
 ### G. System overlays
 | # | Screen | What it does | Phase |

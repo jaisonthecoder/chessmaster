@@ -522,7 +522,45 @@ REWARD  ⭐⭐⭐ + "Ghost Catcher" badge.
 
 ---
 
-## 4.18 Lesson 5.3 — "Forks: the Royal Fork and the Family Fork" (Explorers / Academy)
+## 4.18 Lesson 3.14 — "Game Points: Win, Draw, Lose" (Pip)
+
+**Objective:** the child knows win = 1, draw = ½, loss = 0, can read 1-0 / 0-1 / ½-½, can add up a small
+tournament table, and doesn't confuse piece points with game points. **Duration:** about 5 min.
+
+```
+SCENE   A tiny tournament hall. Three tables, a big scoreboard with empty coin slots.
+PIP     "When a game ends, the players get points! Let's see how."
+ACTION  Table 1: White checkmates Black. A whole gold coin drops into White's slot. "Clink!"
+PIP     "A win gets ONE whole point!"
+ACTION  Table 2: a draw. One coin splits into two halves; each player gets a half.
+PIP     "A tie gets HALF a point each."
+ACTION  Table 3: the losing player gets an empty plate, then a little star sticker that says "I learned something".
+PIP     "A loss gets zero points. But every game teaches you something!"
+INTERACT (Pick one) "White won. How do we write it?"  1-0 · 0-1 · ½-½
+  ✔ SUCCESS  "Yes! White's number comes first."
+  ✘ RETRY    "The first number is White's points, the second is Black's. Who won?"
+INTERACT (Pick one) "It was a tie. How do we write it?"  → ½-½
+
+ACTION  A mini tournament: Amy, Ben and Cara each play the other two once.
+        Amy beats Ben. Ben and Cara draw. Cara beats Amy.
+INTERACT (Score Keeper) Drag the coins into each player's row.
+        Amy = 1, Ben = ½, Cara = 1½.
+PIP     "3 games, so 3 points were shared. Who won the tournament?"
+INTERACT Tap the winner → Cara. Confetti.
+
+PIP     "Oh! I captured a queen, so I get 9 points in the tournament, right?"
+INTERACT (Spot Pip's mistake) 👍 / 👎
+  ✔ SUCCESS  👎 → PIP: "Right! Piece points help me choose good moves. Tournament points only come from
+             winning, drawing or losing the game."
+INTERACT (Check) 5 items: write a result, add up a 3-player table, win/draw/loss values, piece vs game points.
+REWARD  ⭐⭐⭐ + sticker "Score Keeper". Unlocks the mini-game "Score Keeper".
+```
+
+**[AC] variant:** Coach Nova adds forfeits (+/−), half-point and full-point byes, and shows a real crosstable.
+
+---
+
+## 4.19 Lesson 5.3 — "Forks: the Royal Fork and the Family Fork" (Explorers / Academy)
 
 ```
 SCENE   Tactics Jungle. FEN r3k3/pp3ppp/8/1N6/8/8/PPP2PPP/6K1 w - - 0 1
@@ -542,7 +580,7 @@ REWARD  XP + badge progress "Fork Master I/II/III".
 
 ---
 
-## 4.19 Lesson 6.1 — "Queen + King vs King: the Box Method"
+## 4.20 Lesson 6.1 — "Queen + King vs King: the Box Method"
 
 ```
 SCENE   Endgame Mountains. White Ke1, Qd1; Black Ke5. Coloured fence shows the 'box' the
@@ -561,7 +599,7 @@ REWARD   Mountain badge; Boss gate progress.
 
 ---
 
-## 4.20 Lesson 7.1 — "Opening Principles in Depth" (Academy voice)
+## 4.21 Lesson 7.1 — "Opening Principles in Depth" (Academy voice)
 
 ```
 SCENE    Opening Harbour; realistic board, Coach Nova at a desk with a demo board.
@@ -582,7 +620,62 @@ REWARD   XP; unlocks Repertoire Builder.
 
 ---
 
-## 4.21 Boss Battle script template
+## 4.22 Lesson 10.10 — "Tournament Tables and Tiebreaks" (Nova)
+
+**Objective:** read a crosstable, calculate the main FIDE tiebreaks, and explain why round robins and Swiss events use different ones. Worked examples follow the rules reference (2.12a).
+
+```
+SCENE   A tournament hall at the end of the last round. Two players are tied on the final scoreboard.
+NOVA    "Same score, but only one trophy for second place. Tiebreaks decide. They're announced before
+         the event, so everyone knows the rules."
+ACTION  A 4-player round-robin crosstable builds row by row (A 1½, B 2, C 1½, D 1).
+NOVA    "Check first: 6 games, 6 points shared. Now A and C are tied. Their own game? A draw. Still tied."
+NOVA    "Next tiebreak: Sonneborn-Berger. Add the scores of the players you beat, plus half the
+         scores of the players you drew with."
+INTERACT (Calculate) "A beat B and drew with C. What's A's Sonneborn-Berger?"  number pad
+  ✔ SUCCESS  "2 + ¾ = 2¾. Exactly."
+  ✘ RETRY    Hint 1: "What did B score?" Hint 2: "Half of C's 1½ is ¾."
+INTERACT (Calculate) C's Sonneborn-Berger → 1¾. "So who's second?" → A.
+NOVA    "Why not Buchholz here? In a round robin everyone plays the same opponents, so it's always equal."
+
+ACTION  Switch to a Swiss event. One player's opponents finished on 3, 2½, 1, 4 and 3.
+NOVA    "In a Swiss, Buchholz adds up your opponents' scores: it rewards a tougher path."
+INTERACT (Calculate) Buchholz → 13½; Cut-1 → 12½; Median → 8½.
+INTERACT (Calculate) Progressive score for W, L, W, D, W → running totals 1, 1, 2, 2½, 3½ → 10.
+NOVA    "Team events count match points too: at the Olympiad a match win is 2, a drawn match 1."
+INTERACT (Tiebreak Detective) Three tied players and a stated tiebreak order: rank them.
+INTERACT (Check) 5 items across direct encounter, Buchholz variants, Sonneborn-Berger and progressive score.
+REWARD  XP + badge "Tiebreak Detective".
+```
+
+---
+
+## 4.23 Lesson 10.11 — "How Ratings Work: Calculating Elo Points" (Nova)
+
+**Objective:** use the FIDE expected-score table and K-factor to calculate a rating change, and know that FIDE, national and online ratings are different scales.
+
+```
+SCENE   Nova's desk with a slider: "Rating difference".
+NOVA    "Your rating predicts your score. If you're 100 points higher, you're expected to score
+         0.64 per game. That number comes from FIDE's official table."
+INTERACT Move the slider (0, 100, 200, 300, 400) and watch the expected score: 0.50, 0.64, 0.76, 0.85, 0.92.
+NOVA    "After the game: change = K × (your score − expected score)."
+ACTION  K-factor cards: K 40 (new players and juniors under 2300), K 20 (below 2400), K 10 (2400 and up).
+NOVA    "Example: you're 1500, a junior, so K is 40. Your opponent is 1600, so your expected score is 0.36."
+INTERACT (Rating Predictor) "You win. Calculate the change."  → 40 × (1 − 0.36) = +25.6
+INTERACT (Calculate) Draw → +5.6. Loss → −14.4.
+NOVA    "Beat a stronger player: big gain. Lose to a weaker one: bigger drop. Fair, right?"
+NOVA    "Careful: online sites and national federations use different systems. A 1500 online isn't a FIDE 1500."
+INTERACT (Pick one) "Which number is your FIDE rating?" Choose among an app practice rating, an online rating and a FIDE card.
+INTERACT (Check) 5 items: expected score, K-factor choice, three rating changes.
+REWARD  XP + badge "Rating Mathematician". Unlocks the Academy rating calculator.
+```
+
+Lesson 10.12 ("Performance Rating, First Ratings and Norms") follows the same pattern, using the dp table and the 6/9 example from the rules reference (2.12a.4).
+
+---
+
+## 4.24 Boss Battle script template
 
 ```
 SCENE    Kingdom gate. Boss character appears with fanfare (friendly-rival tone, never scary for LK).
@@ -596,7 +689,7 @@ RULES    3 hearts; losing all hearts → "Practice Camp" recommends 2 targeted l
 VICTORY  Boss bows, gate opens, map camera flies to the next kingdom; certificate + parent notification.
 ```
 
-## 4.22 Voice-over and localisation notes
+## 4.25 Voice-over and localisation notes
 
 - Record the two guide voice sets (Pip, Nova) plus the shared supporting cast. Including wrong-answer feedback for each error type, three explanation styles per concept, boss and bot lines, and scenario-playbook lines, the full curriculum needs an estimated **6,000–8,000 recorded lines per language** (re-estimate once Levels 1–3 are scripted).
 - Dynamic text (square names, AI explanations, library explanations) uses **one text-to-speech voice per guide**, designed to sound close to the recorded guide and always marked as Pip's or Nova's "reading voice".

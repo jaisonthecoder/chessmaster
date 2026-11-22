@@ -189,7 +189,7 @@ Mini-games: *Knight's Quest* (reach targets), *Knight vs Pawns*. Show that a kni
 diagonally. On their very first step they can take a big jump of two."
 **Teaching notes.** The most rule-dense piece. Teach in three steps: move, then capture, then first-move double step. Misconception check: "Can the pawn capture the piece directly in front?" (No, it is blocked.) Mini-game: **Pawn Wars** (only pawns; the first to reach the far side wins). This is a classic teaching game.
 
-### Piece values (a guideline, not a rule)
+### Piece values (a guideline, not a rule; see 2.12a for all four kinds of points)
 
 | Pawn | Knight | Bishop | Rook | Queen | King |
 |---|---|---|---|---|---|
@@ -312,7 +312,7 @@ sorting game. Level 6 endgame lessons repeat the stalemate traps in K+Q vs K.
 | **75-move rule** | 75 moves by each player without any pawn move or capture (unless the last move was checkmate) | Automatic |
 | **Timeout vs no mating material** | A player's time runs out, but the opponent **cannot checkmate by any legal sequence** (for example, the opponent has a lone king) | Automatic draw |
 
-### Points: how a game is scored
+### Points: how a game is scored (full scoring rules, tiebreaks and ratings in 2.12a)
 | Result | Points | Written as |
 |---|---|---|
 | Win | 1 | 1-0 (White won) or 0-1 (Black won) |
@@ -410,6 +410,129 @@ export their games as PGN in the Academy track.
 
 ---
 
+## 2.12a Points and scoring: the international standard
+
+There are four different kinds of "points" in chess. Children often mix them up, so the app always names which one it means.
+
+| Kind of points | What it measures | Official? |
+|---|---|---|
+| **1. Piece values** | How useful a piece usually is (pawn 1 … queen 9) | No. A coaching guide, not a FIDE rule |
+| **2. Game points** | The result of one game (1, ½ or 0) | Yes. FIDE Laws of Chess |
+| **3. Tournament points and tiebreaks** | Your total score in an event, and who ranks higher when scores are equal | Yes. FIDE Tournament Rules and Tie-Break Regulations, plus each event's own regulations |
+| **4. Rating points** | Your playing strength, changing after every rated game | Yes. FIDE Rating Regulations (national and online sites use their own systems) |
+
+> Content owners re-check the FIDE Handbook (Laws of Chess, Tie-Break Regulations, Rating Regulations) every year, because details change.
+
+### 2.12a.1 Piece values (material count)
+
+| Pawn | Knight | Bishop | Rook | Queen | King |
+|---|---|---|---|---|---|
+| 1 | 3 | 3 | 5 | 9 | not counted (can't be captured) |
+
+- **Material count:** add up each side's pieces. Example: White has Q, R, B, 5 pawns = 9 + 5 + 3 + 5 = **22**; Black has R, R, N, 5 pawns = 5 + 5 + 3 + 5 = **18**. White is **4 points ahead**.
+- These numbers are a guide. Position matters: a well-placed knight can beat a poor rook, and two bishops are often worth a little more than bishop + knight. The app never calls piece values a rule.
+
+**Kid version.** "A pawn is worth 1 point, a knight or bishop 3, a rook 5 and a queen 9. Count them up to see who has more!"
+
+### 2.12a.2 Game points (FIDE Laws of Chess)
+
+| Result | Points | Written as |
+|---|---|---|
+| Win | 1 | 1-0 (White won) or 0-1 (Black won) |
+| Draw | ½ | ½-½ |
+| Loss | 0 | |
+| **Win by forfeit** (opponent didn't arrive or was disqualified) | 1 for the winner, 0 for the loser | +/− (or −/+) |
+| **Full-point bye** (no opponent available, for example an odd number of players in a Swiss round) | Usually 1 | The event regulations decide |
+| **Half-point bye** (a round a player asked to miss, if the event allows it) | ½ | |
+| **Zero-point bye** (absence without a bye) | 0 | |
+
+- Some invitational events use other systems (for example 3 points for a win and 1 for a draw). **The event's regulations always say which system is used**; FIDE's standard is 1, ½, 0.
+- **Team events** count two things: *game (board) points* from each game, and *match points* for each team match. At the Chess Olympiad a match win gives 2 match points, a drawn match 1, and a lost match 0.
+
+### 2.12a.3 Tournament tables and tiebreaks
+
+**Score:** add your game points from every round. The player with the most points wins. When players have the same score, **tiebreaks** decide the ranking. The tiebreaks and their order **must be announced before the event**; FIDE's Tie-Break Regulations define each method, including special rules for byes and unplayed games.
+
+| Tiebreak | How to calculate it | Used mostly in |
+|---|---|---|
+| **Direct encounter** | The result of the game(s) between the tied players | Both |
+| **Buchholz** | The sum of the final scores of all your opponents | Swiss |
+| **Buchholz Cut-1** | Buchholz minus your lowest-scoring opponent's score | Swiss |
+| **Median Buchholz** | Buchholz minus the highest and the lowest opponent scores | Swiss |
+| **Sonneborn-Berger** | The final scores of the opponents you **beat**, plus **half** the final scores of the opponents you **drew** with | Round robin (also Swiss) |
+| **Number of wins** | How many games you won | Both |
+| **Games with Black** | How many games you played with Black | Swiss |
+| **Progressive score** | Add up your running total after every round | Swiss |
+| **Average rating of opponents** | The average rating of the players you met | Swiss |
+| **Koya score** | Your points against players who scored at least 50% | Round robin |
+
+**Worked example 1: a four-player round robin (everyone plays everyone once)**
+
+| | A | B | C | D | Score |
+|---|---|---|---|---|---|
+| **A** | — | 1 | ½ | 0 | **1½** |
+| **B** | 0 | — | 1 | 1 | **2** |
+| **C** | ½ | 0 | — | 1 | **1½** |
+| **D** | 1 | 0 | 0 | — | **1** |
+
+- Check: 6 games were played, so 6 points were shared: 1½ + 2 + 1½ + 1 = 6 ✓.
+- B wins with 2 points. A and C are tied on 1½.
+- **Direct encounter:** A and C drew, so it's still tied.
+- **Sonneborn-Berger:** A beat B (score 2) and drew with C (score 1½ → half is ¾): 2 + ¾ = **2¾**. C beat D (score 1) and drew with A (¾): 1 + ¾ = **1¾**. **A finishes 2nd, C 3rd.**
+- Buchholz doesn't help here: in a round robin everyone meets the same opponents, so A's and C's Buchholz are both 4½. That's why round robins use Sonneborn-Berger instead.
+
+**Worked example 2: Swiss tiebreaks for one player**
+
+A player's 5 opponents finished with 3, 2½, 1, 4 and 3 points. The player's results by round were win, loss, win, draw, win.
+- **Buchholz** = 3 + 2½ + 1 + 4 + 3 = **13½**
+- **Buchholz Cut-1** = 13½ − 1 (lowest) = **12½**
+- **Median Buchholz** = 13½ − 4 (highest) − 1 (lowest) = **8½**
+- **Progressive score:** running totals 1, 1, 2, 2½, 3½ → 1 + 1 + 2 + 2½ + 3½ = **10**
+
+### 2.12a.4 Rating points (FIDE Elo system)
+
+A rating predicts results: the bigger the rating difference, the more the stronger player is expected to score. After a rated game your rating changes by:
+
+> **Rating change = K × (your score − your expected score)**
+
+**Expected score.** FIDE uses an official table based on the rating difference (differences above 400 count as 400). The formula `1 / (1 + 10^(−difference/400))` gives almost the same numbers and is used for teaching; the app's calculator uses the official table.
+
+| Rating difference (you are higher by) | 0 | 100 | 200 | 300 | 400 |
+|---|---|---|---|---|---|
+| Your expected score (FIDE table) | 0.50 | 0.64 | 0.76 | 0.85 | 0.92 |
+| The lower-rated player's expected score | 0.50 | 0.36 | 0.24 | 0.15 | 0.08 |
+
+**K-factor** (how fast a rating moves), under the FIDE Rating Regulations:
+- **K = 40** for a new player until they have played 30 rated games, and for players under 18 while their rating stays below 2300.
+- **K = 20** while the rating stays below 2400.
+- **K = 10** once a player's published rating has reached 2400.
+- If K × (number of games in one rating period) would be more than 700, K is reduced so that it equals 700.
+
+**Worked example 3.** A 12-year-old rated 1500 (K = 40) plays someone rated 1600. Her expected score is 0.36.
+- She **wins**: 40 × (1 − 0.36) = **+25.6** → new rating about 1526.
+- She **draws**: 40 × (0.5 − 0.36) = **+5.6**.
+- She **loses**: 40 × (0 − 0.36) = **−14.4**.
+
+Over a whole event, add the changes from each game (FIDE publishes new ratings monthly).
+
+**Performance rating** shows how strongly someone played in one event:
+
+> **Performance = average rating of opponents + dp**, where dp comes from FIDE's table for the percentage scored.
+
+| Percentage scored | 100% | 90% | 80% | 75% | 70% | 60% | 50% |
+|---|---|---|---|---|---|---|---|
+| dp (FIDE table) | +800 | +366 | +240 | +193 | +149 | +72 | 0 |
+
+(Below 50% the values are the same but negative.) Example: 6 out of 9 (about 67%, dp ≈ +125) against opponents averaging 1700 gives a performance of about **1825**.
+
+**First rating and minimum rating.** A new player gets a first rating after enough rated games against rated opponents, calculated like a performance rating (since the 2024 changes, two imaginary draws against 1800-rated players are included). The lowest FIDE rating is 1400.
+
+**Other rating systems.** National federations and online sites use different systems (for example Glicko-2) and different scales, so a "1500" online is not the same as a FIDE 1500. The app's own ratings are labelled "ChessMaster practice rating" and never presented as FIDE ratings.
+
+**Kid version (ages 8+).** "Your rating is a number that shows how strong you are. Beat someone stronger and it goes up a lot; lose to someone weaker and it goes down more."
+
+---
+
 ## 2.13 Variants used for teaching
 
 | Variant | Purpose |
@@ -469,3 +592,5 @@ Every case must have an automated test. The rules engine (chess.js) is also vali
 21. Second illegal move when the opponent has no mating material: a draw.
 22. Fivefold repetition and the 75-move rule end the game automatically; threefold and 50-move need a claim.
 23. Lesson positions without kings (practice boards) must load in "playground" mode, never in game mode.
+24. Tiebreak calculator: Buchholz, Cut-1, Median, Sonneborn-Berger, progressive score and direct encounter match the worked examples in 2.12a; byes and unplayed games follow the current FIDE Tie-Break Regulations.
+25. Rating calculator: expected scores come from the official FIDE table; K-factor rules and the K × games ≤ 700 cap are applied.
