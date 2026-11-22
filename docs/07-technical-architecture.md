@@ -140,6 +140,7 @@ the lesson in all three tracks, and validate that every position is legal (throu
 - **Kid-language review:** engine evaluations are converted by rules into explanations, for example:
   - The evaluation drops by 3 or more and the moved piece is capturable → "Oops! Your knight was left unprotected on f5."
   - A missed mate in 1 → "There was a checkmate here! Can you find it?" (becomes an "Oops Replay" puzzle)
+- **AI coach:** see [AI Strategy](13-ai-strategy.md) for the full design (engine facts first, LLM only for phrasing, three-tier answer path, cost and safety rules).
 - **Optional AI coach (later phase):** a server-side large language model turns engine output and the position into a friendly, age-appropriate explanation. It is guard-railed (chess topics only, output filtered), off by default for under-13s unless a parent turns it on, and never chats freely.
 
 ## 7.7 Data model (core)

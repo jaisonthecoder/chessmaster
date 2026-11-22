@@ -154,4 +154,5 @@ App launch
 | Offline mode | Downloaded kingdoms work without internet; sync later | P1 |
 | Safety | No ads, no chat, no personal data, parent gate | P1 |
 | Rules coverage check | The build fails if any rule lacks a lesson, practice, question and boss item | P1 |
-| AI coach (optional) | Kid-friendly explanations of engine analysis; guard-railed; off by default for under-13s | P3 |
+| AI coach | Template → library → cache → live answer path; live explanations of the child's own games (P2); Ask Pip/Nova and teach-back grading (P3, opt-in). See [AI Strategy](13-ai-strategy.md) | P2 / P3 |
+| Offline AI content factory | Batch-generated, human-reviewed explanation library, question banks, script and translation drafts | P1 |

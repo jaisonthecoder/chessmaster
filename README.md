@@ -25,6 +25,7 @@ becoming a titled chess master.
 | 10 | [Plan Critique, Round 1](docs/10-plan-critique.md) | Honest review of documents 1–8 and the changes made |
 | 11 | [Self-Guided Learning](docs/11-self-guided-learning.md) | How a child learns completely alone: first launch with no adult, simple UI rules, a guide that asks questions, 12 question types, a playbook of 60+ scenarios, and a rules coverage matrix |
 | 12 | [Features & Screens Inventory](docs/12-features-and-screens.md) | Every screen and feature, grouped by app area, with its release phase |
+| 13 | [AI Strategy](docs/13-ai-strategy.md) | Where AI is used (engines, offline content generation, live coach), how to keep it cheap and fast, and child-safety rules |
 
 ## At a glance
 
