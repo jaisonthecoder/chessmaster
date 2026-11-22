@@ -252,10 +252,19 @@ a check question, and coverage in a Boss or coached game. Missing coverage fails
 
 | Rule / scenario | Taught in | Practice | Question type(s) | Boss / game check |
 |---|---|---|---|---|
-| Board orientation (light on the right) | 1.2, 1.5 | Build the Army | Spot Pip's mistake (board rotated) | L1 Boss |
-| Files, ranks, coordinates | 1.3, 1.4 | Coordinate Rush | Tap it, Pick one | L1 Boss |
-| Initial setup, queen on her colour | 1.5 | Build the Army: Speed Run | Spot Pip's mistake (queen and king swapped) | L1 Boss |
-| White moves first; taking turns | 1.8 | First coached game | Thumbs up / down | L3 game |
+| Using the app's board: select, dots and rings, move, cancel, switch, drag, rotate, zoom, reset, 2D/3D, help buttons | 1.2 | Wake the Pieces | Move it, Tap it | L1 Boss |
+| Piece names, shapes, how many (16 per side, 32 in total) | 1.3 | Who's Who? | Tap it, Pick one, Spot Pip's mistake | L1 Boss |
+| 64 squares, light and dark, 8 × 8 | 1.4 | File & Rank Catch | Count it, Thumbs up / down | L1 Boss |
+| Board orientation (light on the right) | 1.4, 1.12 | Build the Army | Spot Pip's mistake (board rotated) | L1 Boss |
+| Types of chessboards and sets; real chess is always 8 × 8 | 1.5 | — | Sort it, Thumbs up / down | L1 Boss |
+| Files | 1.6 | File & Rank Catch | Tap all | L1 Boss |
+| Ranks | 1.7 | File & Rank Catch | Tap all | L1 Boss |
+| Diagonals; long diagonals | 1.8 | File & Rank Catch | Tap all | L1 Boss |
+| Coordinates (square names) | 1.9 | Coordinate Rush | Tap it, Pick one | L1 Boss |
+| Board map: centre, kingside, queenside, halves, back ranks, edges, corners | 1.10 | Board Map Quiz | Tap it, Pick one | L1 Boss |
+| 2D diagrams and symbols; the board from Black's side | 1.11 | Who's Who? (2D round) | Pick one, Tap it | L1 Boss |
+| Initial setup, queen on her colour | 1.12 | Build the Army: Speed Run | Spot Pip's mistake (queen and king swapped) | L1 Boss |
+| White moves first; moves, turns and captures | 1.13 | First coached game | Thumbs up / down | L3 game |
 | Rook movement and blocking | 2.1, 2.3 | Star Collector | Tap all, Count it | L2 Boss |
 | Bishop movement; colour-bound | 2.4 | Star Collector (impossible stars) | Why?, Thumbs up / down | L2 Boss |
 | Queen movement | 2.6 | Hungry Pieces | Tap all | L2 Boss |
@@ -264,7 +273,8 @@ a check question, and coverage in a Boss or coached game. Missing coverage fails
 | Pawn move; first-move double step; blocked pawns | 2.11 | Pawn Wars | Predict, Thumbs up / down | L2 Boss |
 | Pawn diagonal capture; no straight capture | 2.12 | Pawn Wars | Spot Pip's mistake | L2 Boss |
 | Can't capture own pieces; can't jump (except the knight) | 2.3 | Star Collector | Thumbs up / down | L2 Boss |
-| Piece values | 2.14, 4.1 | Hungry Pieces | Pick one (best capture) | L4 Boss |
+| Piece values (points) | 2.14, 4.1 | Hungry Pieces | Pick one (best capture), Count it | L2 Boss, L4 Boss |
+| Game points: win 1, draw ½, loss 0; how results are written | 3.12 | Tournament table game | Count it, Pick one | L3 Boss |
 | Check: recognising it | 3.1 | Is It Check? | Thumbs up / down | L3 Boss, coached games |
 | Escaping check: run, capture, block | 3.2 | Escape drills | Why?, Move it | L3 Boss |
 | Knight / pawn checks can't be blocked | 3.2 | Escape drills | Why? | L3 Boss |

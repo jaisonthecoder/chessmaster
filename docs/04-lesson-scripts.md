@@ -99,7 +99,141 @@ You win by checkmate: attacking the enemy king so it can't escape. Everything we
 
 ---
 
-## 4.4 Lesson 1.4 — "Every House Has an Address" (coordinates)
+## 4.4 Lesson 1.2 — "Your Magic Board: Tap, Move and Look Around" (how to use the app's board)
+
+**Objective:** the child can select a piece, understand the dots and rings, move by tapping or dragging, cancel a
+selection, turn and zoom the board, and use the help buttons, all without an adult. **Duration:** about 4 min.
+This lesson comes *before* any piece movement, so later lessons never fail because the child doesn't know how to use the app.
+
+```
+SCENE   Board with only three white pieces, all asleep: a rook on a1, a knight on g1, a pawn on e2.
+PIP     "These pieces are sleepy! Tap one to wake it up!"
+INTERACT Tap any piece.
+  ✔ SUCCESS  The piece yawns, LIFTS up a little, and glows gold. Soft "tock" sound.
+PIP     "You picked it up! See it glowing? That means it's chosen."
+ACTION  Small green DOTS appear on the squares the piece can go to.
+PIP     "The little dots show where it can go. Tap a dot!"
+INTERACT Tap a dot.
+  ✔ SUCCESS  The piece glides there and lands with a wooden "clack". A soft yellow
+             glow stays on the start and end squares.
+PIP     "It moved! The yellow glow shows the last move, so you never forget what happened."
+  ✘ RETRY   (taps a square with no dot) Gentle "bonk", the dots pulse.
+             PIP: "Not there. Tap a square with a dot!"
+
+PIP     "Changed your mind? Tap the glowing piece again to put it back down."
+INTERACT Select a piece, then tap it again. → It settles down; the dots disappear.
+PIP     "Want a different piece? Just tap the other one."
+INTERACT Select the rook, then tap the knight. → The selection jumps to the knight.
+
+ACTION  A black pawn appears on a square the knight can reach. It shows a RING instead of a dot.
+PIP     "A ring around an enemy piece means you can capture it!"
+INTERACT Capture the pawn. → It bows and walks off to the side "bench" (captured-pieces tray).
+
+PIP     "There's another way to move. Press on a piece, keep your finger down, slide it, and let go!"
+ACTION  A ghost hand demonstrates a drag. The square under the finger lights up.
+INTERACT Drag a piece to a dot.
+  ✘ RETRY   (drops it on a wrong square) It springs back home.
+             PIP: "Oops, it bounced back! Let go on a dot."
+
+PIP     "You can look around too! Slide your finger on the table, not on a piece, to turn the board."
+INTERACT Turn the board. (Turning is limited, so the board can't get lost.)
+PIP     "Pinch with two fingers to zoom in and out."
+INTERACT Zoom.
+PIP     "Lost? Tap the target button 🎯 to see the board the normal way again."
+INTERACT Tap Reset view.
+PIP     "And this button makes the board flat, like a picture in a book. Tap it again for 3D!"
+INTERACT Toggle 2D / 3D twice.
+
+ACTION  The ❓ 🔁 🏠 buttons glow one at a time.
+PIP     "If you ever need me, tap the question mark. To see something again, tap the circle arrow.
+         The little house takes you home, and I always save your game first!"
+INTERACT Tap ❓ → Pip waves: "I'm always here!"
+
+INTERACT (Check) "Wake the Pieces": 5 tasks: select and move by tapping, change your mind, capture with a
+         ring, move by dragging, flip to 2D and back.
+REWARD  ⭐⭐⭐ + sticker "Board Boss". Unlocks the mini-game "Wake the Pieces".
+```
+
+**Interaction rules this lesson teaches (they hold everywhere in the app):**
+
+| Action | Result |
+|---|---|
+| Tap your own piece | Selects it: it lifts, glows gold, and shows the legal squares |
+| Dot on a square | The selected piece can move there |
+| Ring around an enemy piece | The selected piece can capture it |
+| Tap a dot or ring | Moves there |
+| Tap the selected piece again | Cancels the selection |
+| Tap a different piece of yours | Switches the selection |
+| Tap an empty square with no dot | Nothing happens (a soft hint, no penalty) |
+| Press, slide and release | Drag move; it springs back if the square isn't legal, and the guide explains why |
+| Yellow glow on two squares | The last move played |
+| Red glow under a king | That king is in check |
+| Slide on the table / pinch | Turn / zoom the board (limited) |
+| 🎯 Reset view · 2D/3D · 🔄 Flip | Standard view · flat or 3D · see from the other side |
+
+**[AC] variant:** Coach Nova covers the same in 40 seconds, plus Academy extras: turning legal-move dots off (as in real tournaments),
+drawing arrows and circles on the analysis board, keyboard control (arrow keys + Enter), and move confirmation.
+
+---
+
+## 4.5 Lesson 1.3 — "Meet the Pieces"
+
+```
+SCENE   A parade ground. The white army marches in, one piece type at a time; each stops on a pedestal.
+PIP     "Let's meet the team! Everyone has a special hat, so you can tell them apart."
+ACTION  King steps forward; his cross sparkles.
+KING    "I'm the King: the tallest, with a cross on top. There's only one of me!"
+ACTION  Queen steps forward; her crown sparkles.
+QUEEN   "I'm the Queen, with a crown. Only one of me too!"
+ACTION  Two Rooks roll in.  ROOK: "We're the Rooks, castle towers! There are two of us."
+ACTION  Two Bishops.        BISHOP: "Bishops have a pointy hat with a little cut in it. Two of us!"
+ACTION  Two Knights neigh.  SPARKY: "Knights look like horses! Two of us!"
+ACTION  Eight Pawns march.  PIP: "And us, the Pawns! Small, with round heads. There are EIGHT of us!"
+PIP     "Let's count: 1 King, 1 Queen, 2 Rooks, 2 Bishops, 2 Knights, 8 Pawns. That's 16!"
+ACTION  The black army marches in on the other side. "The Black army has 16 too. 32 pieces in all!"
+
+INTERACT (Who's Who?) "Tap the Queen!" / "Tap ALL the Knights!" / "Which one is the Bishop?" (3 choices)
+INTERACT (Spot Pip's mistake) Pip points at a Bishop: "This is the Queen, right?" 👍 / 👎
+         → "Show me the real Queen!"
+INTERACT [EX/AC] Match each 3D piece to its 2D symbol ♔ ♕ ♖ ♗ ♘ ♙, then [AC] to its letter K Q R B N
+         (pawns have no letter).
+REWARD  ⭐⭐⭐ + sticker "Team Captain". Unlocks the mini-game "Who's Who?".
+```
+
+---
+
+## 4.6 Lesson 1.5 — "Chessboards Around the World"
+
+```
+SCENE   Pip opens a magic picture book. Each page "zooms" the camera into a new place with a different board.
+PIP     "Chess is played everywhere! Let's go on a trip to see different chessboards."
+ACTION  Page 1, a living room: a wooden board with wooden pieces.  PIP: "A wooden board at home!"
+ACTION  Page 2, a school hall: rows of green-and-white roll-up boards with letters and numbers on the edges.
+PIP     "In a chess club or tournament, boards often roll up like a mat. See the letters and numbers on the side?"
+ACTION  Page 3, a car: a tiny magnetic travel set.  PIP: "Magnets keep the pieces on during a bumpy ride!"
+ACTION  Page 4, a park: giant pieces as tall as children.  PIP: "Giant chess! You carry the pieces in your arms!"
+ACTION  Page 5, a classroom: a teacher's board hanging on the wall.  PIP: "Teachers use a big board on the wall."
+ACTION  Page 6, a big tournament: a board with lights that sends the moves to a screen.
+PIP     "Some special boards tell a computer every move, so people all over the world can watch!"
+ACTION  Page 7, a book: a flat 2D diagram.  PIP: "In books, the board is a flat picture."
+ACTION  Page 8, back to our 3D board.  PIP: "And here's ours: the magic 3D board!"
+
+PIP     "Here's a secret. Every real chessboard has… 8 squares this way and 8 that way! Always the same."
+ACTION  A small 4×4 practice board appears with a "Practice!" sign.
+PIP     "Sometimes we practise on little boards, but REAL chess is always 8 by 8."
+PIP     "And even if the squares are green or brown, we still call them the light squares and the dark squares!"
+
+INTERACT (Sort it) Swipe cards: "Real chess board ✅" vs "Practice board 🧩" (an 8×8 green board, a 6×6 board,
+         a giant 8×8 park board, a 5×5 board, a 2D diagram…).
+INTERACT (Thumbs up/down) A green-and-white board: "Is this a real chessboard?" 👍
+INTERACT [AC] Coach Nova adds: the Staunton piece design, FIDE tournament equipment sizes,
+         and electronic boards used for live broadcasts.
+REWARD  ⭐⭐⭐ + sticker "World Traveller".
+```
+
+---
+
+## 4.7 Lesson 1.9 — "Every House Has an Address" (coordinates)
 
 ```
 SCENE   Board viewed from directly above (top-down mode). Each file is a coloured lane.
@@ -124,7 +258,33 @@ REWARD  ⭐ per accuracy band; sticker "Postman Pip".
 
 ---
 
-## 4.5 Lesson 1.5 — "Build the Army" (setup)
+## 4.8 Lesson 1.10 — "The Board Map"
+
+```
+SCENE   Top-down view. The board becomes a little island map with areas that light up.
+PIP     "Let's learn the board's map, so you always know where things are!"
+ACTION  d4, e4, d5, e5 glow gold and a little flag pops up.
+PIP     "These four squares in the middle are the CENTRE. It's the best place to be!"
+ACTION  Files e–h glow blue under the King.  PIP: "The King's side is called the KINGSIDE."
+ACTION  Files a–d glow purple under the Queen.  PIP: "The Queen's side is called the QUEENSIDE."
+ACTION  Ranks 1–4 tint white, 5–8 tint black.  PIP: "This half is White's land, that half is Black's land."
+ACTION  Rank 1 and rank 8 glow.  PIP: "The very back rows are the BACK RANKS, where the big pieces live."
+ACTION  Rank 8 sparkles with a rainbow.  PIP: "And if I reach Black's back rank… that's my dream row!"
+ACTION  Corners and edges glow.  PIP: "These are the edges and corners."
+
+INTERACT (Board Map Quiz) "Tap the centre!" / "Is this square on the kingside or the queenside?" /
+         "Tap Black's back rank" / "Tap a corner".
+INTERACT [EX/AC] Flip the board to Black's view: "Where is a1 now?" (it's top-right from Black's side).
+REWARD  ⭐⭐⭐ + sticker "Map Reader". Unlocks "Board Map Quiz".
+```
+
+**Lesson 1.11 "Same Board, Two Views"** follows the same pattern. The 3D board slowly flattens into a 2D diagram
+while each piece morphs into its symbol. The child matches pieces across the two views, then practises
+reading a diagram from a book page and seeing the board from Black's side.
+
+---
+
+## 4.9 Lesson 1.12 — "Build the Army" (setup)
 
 ```
 SCENE   Empty board; pieces wait in a toy chest beside it.
@@ -152,7 +312,7 @@ REWARD  ⭐⭐⭐ + unlock mini-game "Build the Army: Speed Run".
 
 ---
 
-## 4.6 Lesson 2.1 — "Captain Rook's Straight Roads"
+## 4.10 Lesson 2.1 — "Captain Rook's Straight Roads"
 
 ```
 SCENE   Tower Town. Board with ONLY a white Rook on d4. Camera at child's-eye 3/4 angle.
@@ -177,7 +337,7 @@ REWARD  ⭐⭐⭐, Rook badge, Tower Town flag raised on map.
 
 ---
 
-## 4.7 Lesson 2.9 — "The Leaping Knight"
+## 4.11 Lesson 2.9 — "The Leaping Knight"
 
 ```
 SCENE   Leaping Hills. Knight (Sparky) on e4, bouncing on the spot.
@@ -208,7 +368,7 @@ REWARD  ⭐⭐⭐ + sticker "Horse Whisperer".
 
 ---
 
-## 4.8 Lesson 2.11–2.12 — "Pip's March" and "Pawns Fight Sideways"
+## 4.12 Lesson 2.11–2.12 — "Pip's March" and "Pawns Fight Sideways"
 
 ```
 SCENE   Pawn Meadows. Only white pawns on rank 2, Pip on e2. A finish line glows on rank 8.
@@ -233,7 +393,7 @@ PIP     "One day, I'll reach the other side…"
 
 ---
 
-## 4.9 Lesson 3.2 — "Run, Capture, Block" (escaping check)
+## 4.13 Lesson 3.2 — "Run, Capture, Block" (escaping check)
 
 ```
 SCENE   Royal Castle throne room. White King Bram on e1, Black Rook slides to e8 with a dramatic
@@ -261,7 +421,7 @@ REWARD  ⭐⭐⭐ + "Royal Bodyguard" badge.
 
 ---
 
-## 4.10 Lesson 3.4 & 3.6 — "Checkmate: The Winning Trap" / "Stalemate: The Sneaky Tie"
+## 4.14 Lesson 3.4 & 3.6 — "Checkmate: The Winning Trap" / "Stalemate: The Sneaky Tie"
 
 ```
 SCENE   Black King h8, white Queen g7 protected by white King f6. (Simple mate.)
@@ -286,7 +446,7 @@ INTERACT Mini-game "Mate or Stalemate?": swipe each 3D card left (Mate) or right
 
 ---
 
-## 4.11 Lesson 3.8 — "The King's Secret Door" (castling)
+## 4.15 Lesson 3.8 — "The King's Secret Door" (castling)
 
 ```
 SCENE   Night at Royal Castle. King on e1, Rook on h1, pieces between them.
@@ -317,7 +477,7 @@ REWARD  ⭐⭐⭐ + "Castle Architect" badge.
 
 ---
 
-## 4.12 Lesson 3.9 — "Pip's Big Dream" (promotion) — emotional milestone
+## 4.16 Lesson 3.9 — "Pip's Big Dream" (promotion) — emotional milestone
 
 ```
 SCENE   Pawn Meadows at golden hour. Pip on e7. Rank 8 glows with a rainbow.
@@ -338,7 +498,7 @@ REWARD  Special golden sticker "Dream Come True"; Pip becomes available as a Que
 
 ---
 
-## 4.13 Lesson 3.10 — "The Ghost Pawn" (en passant)
+## 4.17 Lesson 3.10 — "The Ghost Pawn" (en passant)
 
 ```
 SCENE   White pawn on e5 (5th rank). Black pawn on d7.
@@ -357,7 +517,7 @@ REWARD  ⭐⭐⭐ + "Ghost Catcher" badge.
 
 ---
 
-## 4.14 Lesson 5.2 — "The Knight Fork" (Explorers / Academy)
+## 4.18 Lesson 5.2 — "The Knight Fork" (Explorers / Academy)
 
 ```
 SCENE   Tactics Jungle. White: Kg1, Nb5, pawns. Black: Ke8, Ra8, pawns. White to move: Nc7+ forks King and Rook.
@@ -375,7 +535,7 @@ REWARD  XP + badge progress "Fork Master I/II/III".
 
 ---
 
-## 4.15 Lesson 6.1 — "Queen + King vs King: the Box Method"
+## 4.19 Lesson 6.1 — "Queen + King vs King: the Box Method"
 
 ```
 SCENE   Endgame Mountains. White Ke1, Qd1; Black Ke5. Coloured fence shows the 'box' the
@@ -394,7 +554,7 @@ REWARD   Mountain badge; Boss gate progress.
 
 ---
 
-## 4.16 Lesson 7.1 — "Opening Principles in Depth" (Academy voice)
+## 4.20 Lesson 7.1 — "Opening Principles in Depth" (Academy voice)
 
 ```
 SCENE    Opening Harbour; realistic board, Coach Nova at a desk with a demo board.
@@ -415,7 +575,7 @@ REWARD   XP; unlocks Repertoire Builder.
 
 ---
 
-## 4.17 Boss Battle script template
+## 4.21 Boss Battle script template
 
 ```
 SCENE    Kingdom gate. Boss character appears with fanfare (friendly-rival tone, never scary for LK).
@@ -429,7 +589,7 @@ RULES    3 hearts; losing all hearts → "Practice Camp" recommends 2 targeted l
 VICTORY  Boss bows, gate opens, map camera flies to the next kingdom; certificate + parent notification.
 ```
 
-## 4.18 Voice-over and localisation notes
+## 4.22 Voice-over and localisation notes
 
 - Record each line in two voice sets: Pip (LK, reused by EX with subtitles) and Nova (AC). That is about 2,700 lines per language for the full curriculum, down from about 4,000 with three sets.
 - Keep lines under 12 words for the Little Knights track, and pause for interaction.

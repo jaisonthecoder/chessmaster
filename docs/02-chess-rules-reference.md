@@ -47,9 +47,74 @@ earlier, at checkmate.
 - Coordinate games: "Tap the square", "Name the square" and "Coordinate Rush" (timed) for older kids.
 - Center squares: d4, e4, d5 and e5 glow during "center control" lessons.
 
+### 2.2.1 The board map (names for areas of the board)
+
+| Area | Squares | Why it matters |
+|---|---|---|
+| **Centre** | d4, e4, d5, e5 | Pieces in the centre control the most squares. Opening rule 1: fight for the centre |
+| **Extended centre** | the 16 squares c3–f3–f6–c6 | Good squares for knights and bishops |
+| **Kingside** | files e–h | Where the kings start; castling short happens here |
+| **Queenside** | files a–d | Where the queens start; castling long happens here |
+| **White's half / Black's half** | ranks 1–4 / ranks 5–8 | "Crossing into enemy land" |
+| **Back rank** | rank 1 (White), rank 8 (Black) | Where the big pieces start; the back-rank mate pattern |
+| **Promotion rank** | rank 8 for White pawns, rank 1 for Black pawns | Where pawns promote |
+| **Edges and corners** | the a- and h-files, the 1st and 8th ranks; a1, h1, a8, h8 | Pieces (especially knights) are weaker on the edge; kings get checkmated in corners |
+| **Long diagonals** | a1–h8 and h1–a8 | The longest lines for bishops and queens |
+
+**Seen from Black's side,** the board is turned around: h8 is bottom-left and a8 is bottom-right. "Light on the right" is still true (a8 is a light square). The app flips the coordinates automatically when the child plays Black.
+
+**Kid version.** "The middle four squares are the *centre*, the best place to be! The king's side of the board is the *kingside*, the queen's side is the *queenside*."
+
+### 2.2.2 Types of chessboards and chess sets
+
+Children will meet chess on many kinds of boards, at school, in clubs, in parks and on screens. Lesson 1.5 shows them all, so a child recognises real chess anywhere.
+
+| Board or set | Where you see it | Notes for kids |
+|---|---|---|
+| **Wooden board and pieces** | Homes, clubs | Classic look; light and dark wood |
+| **Tournament roll-up board** (vinyl or silicone) | Schools, clubs, tournaments | Often green-and-white or brown-and-cream squares, usually with the letters and numbers printed on the edge |
+| **Folding board** | Home, travel | Pieces store inside |
+| **Magnetic travel set** | Car, plane | Small pieces that don't slide off |
+| **Giant garden or park chess** | Parks, schools, hotels | Pieces as tall as a child; the same rules |
+| **Teacher's demonstration board** | Classrooms, commentary | Hangs on the wall; pieces are flat and magnetic |
+| **Electronic (sensor) board** | Big tournaments, home smart boards | Records every move automatically; used to show top games live on the internet |
+| **2D diagrams** | Books, puzzle sheets, websites | Flat pictures with symbols ♔ ♕ ♖ ♗ ♘ ♙; White is usually shown at the bottom |
+| **3D screen boards** | Apps like this one | Can turn, zoom and switch to 2D |
+| **Mini-boards** (4×4, 5×5, 6×6) | Learning games only | Practice only: **real chess is always 8 × 8** |
+
+**Equipment facts (for older kids):**
+- The tournament piece design used worldwide is the **Staunton** design (named after the English player Howard Staunton, and in use since the 1800s).
+- Squares are called "white" and "black" even when they are really green, brown or cream. Pieces are called "White" and "Black" even when they are cream and red.
+- FIDE's equipment standards recommend tournament squares of about **5–6 cm** and a king about **9.5 cm** tall, with pieces sized to fit comfortably inside a square. (Check the current *FIDE Handbook*, "Standards of Chess Equipment", for exact figures.)
+
+### 2.2.3 Reading a 2D chess diagram
+
+| Symbol | ♔ / ♚ | ♕ / ♛ | ♖ / ♜ | ♗ / ♝ | ♘ / ♞ | ♙ / ♟ |
+|---|---|---|---|---|---|---|
+| Piece | King | Queen | Rook | Bishop | Knight | Pawn |
+
+- The outline symbols are White's pieces, the filled symbols are Black's.
+- White is at the bottom unless the diagram says otherwise; a note or a small marker says whose turn it is.
+- Lesson 1.11 matches 3D pieces to their 2D symbols, so children can later use books and puzzle sheets on their own.
+
 ---
 
 ## 2.3 Setting up the pieces
+
+**Meet the pieces (recognition).** Before learning moves, children learn to *recognise* each piece:
+
+| Piece | How to recognise it | How many per side |
+|---|---|---|
+| King ♔ | The tallest piece, with a cross on top | 1 |
+| Queen ♕ | The second tallest, with a crown (points or a ball on top) | 1 |
+| Rook ♖ | A castle tower with a flat, notched top | 2 |
+| Bishop ♗ | A tall rounded hat with a slit cut into it | 2 |
+| Knight ♘ | A horse's head | 2 |
+| Pawn ♙ | The smallest piece, with a round head | 8 |
+
+Each side has **16 pieces**, so there are **32 pieces** at the start. The pieces themselves are sometimes called "men".
+
+**Kid version.** "The King has a cross, the Queen has a crown, the Rook is a tower, the Bishop has a pointy hat, the Knight is a horse, and the little Pawns have round heads!"
 
 **Rule.** Each side has 16 pieces: 1 King, 1 Queen, 2 Rooks, 2 Bishops, 2 Knights, 8 Pawns.
 
@@ -244,6 +309,18 @@ sorting game. Level 6 endgame lessons repeat the stalemate traps in K+Q vs K.
 | **50-move rule** | 50 moves by each player without any pawn move or capture | Claimed by a player |
 | **75-move rule** | 75 moves by each player without any pawn move or capture (unless the last move was checkmate) | Automatic |
 | **Timeout vs no mating material** | A player's time runs out, but the opponent **cannot checkmate by any legal sequence** (for example, the opponent has a lone king) | Automatic draw |
+
+### Points: how a game is scored
+| Result | Points | Written as |
+|---|---|---|
+| Win | 1 | 1-0 (White won) or 0-1 (Black won) |
+| Draw | ½ | ½-½ |
+| Loss | 0 | |
+
+In a tournament, each player's points are added up after every round; the player with the most points wins.
+These game points are different from **piece values** (pawn = 1, queen = 9…), which are only a guide for trading pieces.
+
+**Kid version.** "Win a game, get 1 point. A tie gets half a point. Add them up to see who wins the tournament!"
 
 **Notes.**
 - K+N+N vs K is **not** a dead position (mate is *possible* if the defender blunders, even though it can't be forced). It doesn't end automatically.

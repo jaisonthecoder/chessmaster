@@ -67,6 +67,7 @@ Captured pieces are placed neatly beside the board, so the child can always see 
 ## 6.7 Interaction design
 
 - **Two ways to move:** tap-tap (select, then target) and drag-and-drop. Both are always supported.
+- **Taught, not assumed:** Lesson 1.2 ("Your Magic Board") teaches every board interaction before any chess rule, and its rules table (see [Lesson Scripts](04-lesson-scripts.md)) is the single source of truth for selection behaviour.
 - **Large touch targets:** a minimum of 48 dp. The board is at least 90% of the screen width on phones in portrait.
 - **Move confirmation** (optional, Academy) to train careful play; **undo** allowed in practice mode only.
 - Input: touch, mouse, keyboard (square navigation with arrow keys + Enter for accessibility), stylus.

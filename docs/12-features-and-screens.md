@@ -60,7 +60,7 @@ App launch
 |---|---|---|---|
 | D1 | Practise hub | Cards for mini-games, puzzles, my mistakes and trainers | P1 |
 | D2 | Mini-games library | Unlocked games with best stars | P1 |
-| D3 | Mini-games (each its own screen) | Build the Army, Coordinate Rush, Star Collector, Knight's Quest, King's Walk, Pawn Wars, Hungry Pieces, Mate or Stalemate? | P1 |
+| D3 | Mini-games (each its own screen) | Wake the Pieces, Who's Who?, File & Rank Catch, Board Map Quiz, Build the Army, Coordinate Rush, Star Collector, Knight's Quest, King's Walk, Pawn Wars, Hungry Pieces, Mate or Stalemate? | P1 |
 | D4 | More mini-games | Safe Square, Guard the Treasure, Fork Finder, Puzzle Rush Jr., Mini-Board Battles, King of the Hill | P2 |
 | D5 | Puzzle Gym | Adaptive puzzles (about 75% success target) and themed sets (forks, pins, mates…) | P2 |
 | D6 | Daily Puzzle | One puzzle a day, matched to the child | P2 |

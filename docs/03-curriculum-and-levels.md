@@ -46,17 +46,30 @@ Level (10)  ──▶  Kingdom on the Adventure Map
 Legend: 🎬 lesson · 🎮 mini-game · 🧩 puzzle set · 🤖 bot · 👑 boss battle
 
 ### Level 1 — Board Village (Board Explorer)
+Level 1 assumes the child knows **nothing**: not what a chessboard is, not what the pieces are called, not how to use the app's board.
+
 | # | Lesson / activity | Learning objective |
 |---|---|---|
-| 1.1 | 🎬 Welcome to Chess Land | Two armies, the goal (protect your king, trap theirs), meet Pip |
-| 1.2 | 🎬 The Magic Board | 64 squares, light and dark, "light on the right" |
-| 1.3 | 🎬 Streets Up and Across | Files, ranks, diagonals |
-| 1.4 | 🎬 Every House Has an Address | Coordinates (a1–h8). The picture-alphabet for ages 5–7 |
-| 1.5 | 🎬 Build the Army | Setup: rooks, knights, bishops, queen on her colour, king |
-| 1.6 | 🎮 Coordinate Rush | Find named squares quickly (untimed for 5–7) |
-| 1.7 | 🎮 Build the Army: Speed Run | Set up the board from memory |
-| 1.8 | 🎬 Who Moves First? | White moves first; taking turns |
-| 👑 | **Boss: The Village Riddle-Keeper** | Set up the board correctly and find 5 squares |
+| 1.1 | 🎬 Welcome to Chess Land | Two armies, the goal (protect your king, trap theirs), meet Pip. Tap-only |
+| 1.2 | 🎬 **Your Magic Board: Tap, Move and Look Around** | How to use the app's board: tap a piece to select it, read the dots and rings, tap a square to move, cancel or switch a selection, drag and drop, rotate, zoom, reset the view, switch 2D/3D, use ❓ 🔁 🏠 |
+| 1.3 | 🎬 **Meet the Pieces** | Names and shapes of all 6 pieces, how to tell them apart, how many of each (16 per side, 32 in total), White and Black armies |
+| 1.4 | 🎬 The Magic Board | 64 squares (32 light, 32 dark), 8 × 8, "light on the right", light and dark squares called "white" and "black" whatever their real colour |
+| 1.5 | 🎬 **Chessboards Around the World** | Types of boards and sets: wooden, tournament roll-up, folding, magnetic travel, giant garden chess, teacher's wall board, electronic boards, 2D diagrams and 3D screens; real chess is always 8 × 8 |
+| 1.6 | 🎬 Files: Streets Going Up | The 8 files a–h; "the d-file" |
+| 1.7 | 🎬 Ranks: Floors Going Across | The 8 ranks 1–8; "the 4th rank" |
+| 1.8 | 🎬 Diagonals: Slides Across the Board | Diagonals, same-colour lines, the two long diagonals |
+| 1.9 | 🎬 Every Square Has an Address | Coordinates a1–h8 (letter first, then number). The picture alphabet for ages 5–7 |
+| 1.10 | 🎬 **The Board Map** | Centre squares, corners, edges, kingside and queenside, White's half and Black's half, back rank and promotion rank |
+| 1.11 | 🎬 **Same Board, Two Views** | 3D board vs 2D diagram (piece symbols, as in books and puzzles); how the board looks from Black's side |
+| 1.12 | 🎬 Build the Army | Setup: rooks, knights, bishops, queen on her colour, king, pawns |
+| 1.13 | 🎬 Taking Turns | White moves first; what a move, a turn and a capture are; one move per turn, no skipping |
+| 1.14 | 🎮 Wake the Pieces | Practise selecting and moving (tap-tap and drag) until it's easy |
+| 1.15 | 🎮 Who's Who? | Name the piece; find all the knights; spot the piece in a 2D diagram |
+| 1.16 | 🎮 File & Rank Catch | Tap a whole file, rank or diagonal as it's called out |
+| 1.17 | 🎮 Coordinate Rush | Find named squares quickly (untimed for 5–7) |
+| 1.18 | 🎮 Board Map Quiz | Tap the centre, the queenside, Black's back rank… |
+| 1.19 | 🎮 Build the Army: Speed Run | Set up the board from memory |
+| 👑 | **Boss: The Village Riddle-Keeper** | Name all 6 pieces, move a piece using the app correctly, set up the board, find 5 squares, and answer 3 board-map questions |
 
 ### Level 2 — Piece Valley (Piece Master)
 Pieces are taught in a proven order: **Rook → Bishop → Queen → King → Knight → Pawn**, from simple sliders to the special cases.
@@ -76,7 +89,8 @@ Pieces are taught in a proven order: **Rook → Bishop → Queen → King → Kn
 | 2.11 | 🎬 Pip's March | Pawn moves: 1 step, the 2-step first move, no backward moves, blocked pawns |
 | 2.12 | 🎬 Pawns Fight Sideways | Diagonal pawn captures |
 | 2.13 | 🎮 **Pawn Wars** | A pawn-only game |
-| 2.14 | 🎮 Hungry Pieces | Capture the most points (introduces values: 1, 3, 3, 5, 9) |
+| 2.14 | 🎬 **Points! What Is Each Piece Worth?** | Piece values: pawn 1, knight 3, bishop 3, rook 5, queen 9, king priceless; counting material |
+| 2.15 | 🎮 Hungry Pieces | Capture the most points in N moves |
 | 👑 | **Boss: The Valley Guardian** | Mixed movement and capture challenges for all six pieces |
 
 ### Level 3 — Royal Castle (Rules Champion)
@@ -93,7 +107,8 @@ Pieces are taught in a proven order: **Rook → Bishop → Queen → King → Kn
 | 3.9 | 🎬 Pip's Big Dream (Promotion) | Promotion |
 | 3.10 | 🎬 The Ghost Pawn (En Passant) | En passant |
 | 3.11 | 🎬 Other Ways to Draw | Dead position, repetition, 50-move rule, agreement (simplified) |
-| 3.12 | 🤖 First full game vs **Bumble the Bear** (a very friendly bot) | Apply all the rules |
+| 3.12 | 🎬 **Game Points: Win, Draw, Lose** | How games are scored: win = 1 point, draw = ½, loss = 0; how 1-0, 0-1 and ½-½ are written; how tournament standings add up |
+| 3.13 | 🤖 First full game vs **Bumble the Bear** (a very friendly bot) | Apply all the rules |
 | 👑 | **Boss: The Royal Rules Exam** | 20 rule questions in 3D positions. Earns the *Rules Champion* certificate |
 
 ### Level 4 — Battle Fields (First Gamer)
@@ -214,6 +229,10 @@ Pieces are taught in a proven order: **Rook → Bishop → Queen → King → Kn
 | King's Walk | King safety | 2–3 | Reach the flag safely |
 | Hungry Pieces | Captures, values | 2–4 | Capture the most points in N moves |
 | Build the Army | Setup | 1 | Drag the pieces into position |
+| Wake the Pieces | Using the app's board (select, move, cancel, drag) | 1 | Wake sleeping pieces by tapping them, then move them to glowing squares |
+| Who's Who? | Piece recognition | 1 | Name pieces in 3D and 2D; find all of one kind |
+| File & Rank Catch | Files, ranks, diagonals | 1 | Tap the whole line that's called out |
+| Board Map Quiz | Board areas | 1 | Centre, corners, kingside, queenside, halves, back ranks |
 | Coordinate Rush | Coordinates | 1, 10 | Find or name squares quickly |
 | Safe Square | Attacked squares | 4 | Tap all the safe squares |
 | Mate or Stalemate? | Rule discrimination | 3 | A sorting game |

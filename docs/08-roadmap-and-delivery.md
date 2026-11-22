@@ -20,10 +20,10 @@
 - [ ] Coached games: blunder warnings, check alerts, special-move hints, 3-moment review
 - [ ] Rules coverage matrix check in CI (every rule has a lesson, practice, question and boss item)
 - [ ] Adventure map: Board Village, Piece Valley, Royal Castle
-- [ ] Lessons 1.1–3.12 in the LK and EX voices, with voice-over and subtitles
+- [ ] Lessons 1.1–3.13 in the LK and EX voices, with voice-over and subtitles
 - [ ] 3D board (Story Set + Adventure Set), tap and drag moves, legal dots, highlights, 2D toggle
 - [ ] chess-core with every rule, including castling, en passant, promotion, and all draws
-- [ ] Mini-games: Build the Army, Coordinate Rush, Star Collector, Knight's Quest, King's Walk, Pawn Wars, Hungry Pieces, Mate or Stalemate?
+- [ ] Mini-games: Wake the Pieces, Who's Who?, File & Rank Catch, Board Map Quiz, Build the Army, Coordinate Rush, Star Collector, Knight's Quest, King's Walk, Pawn Wars, Hungry Pieces, Mate or Stalemate?
 - [ ] Bots: Bumble, Fizz, Rocky
 - [ ] Boss battles for Levels 1–3, certificates
 - [ ] Stars, stickers, simple badges
