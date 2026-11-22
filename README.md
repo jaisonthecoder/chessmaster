@@ -21,9 +21,15 @@ becoming a titled chess master.
 | 6 | [3D Visual, Audio & Interaction Design](docs/06-3d-visual-audio-design.md) | Art direction, the real-board feel, camera, animation, sound, accessibility |
 | 7 | [Technical Architecture](docs/07-technical-architecture.md) | Technology stack, 3D rendering, chess engine, lesson scripting format, data, privacy |
 | 8 | [Roadmap & Delivery Plan](docs/08-roadmap-and-delivery.md) | Phases, MVP scope, team, testing with kids, KPIs, risks |
+| 9 | [Competitor Analysis](docs/09-competitor-analysis.md) | ChessKid, Dr. Wolf, Duolingo Chess, DragonBox (Magnus' Kingdom), Story Time Chess, Fritz & Chesster, Dinosaur Chess, Lichess and others: what works, what doesn't, and what we adopt |
+| 10 | [Plan Critique, Round 1](docs/10-plan-critique.md) | Honest review of documents 1–8 and the changes made |
+| 11 | [Self-Guided Learning](docs/11-self-guided-learning.md) | How a child learns completely alone: first launch with no adult, simple UI rules, a guide that asks questions, 12 question types, a playbook of 60+ scenarios, and a rules coverage matrix |
 
 ## At a glance
 
+- **Learns alone:** no adult needed. The app opens straight into play (no account), speaks every instruction,
+  asks the child a question every 30–60 seconds, and explains things a different way when the child is stuck.
+  One big **▶ Continue** button always leads to the right next step.
 - **Audience:** children aged 5–15, plus their parents, teachers and chess coaches.
 - **Three presentation tracks:** *Little Knights* (5–7), *Explorers* (8–10), *Academy* (11–15).
 - **Ten skill levels:** Board Explorer → Piece Master → Royal Rules → First Games → Tactics Cadet →

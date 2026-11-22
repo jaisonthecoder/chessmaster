@@ -35,7 +35,7 @@ override the track, and the app suggests a switch when a child's behaviour sugge
 
 | | **Little Knights** (5–7) | **Explorers** (8–10) | **Academy** (11–15) |
 |---|---|---|---|
-| Guide character | **Pip the Pawn**, a brave little pawn who dreams of becoming a queen | Pip plus **Captain Rook** | **Coach Nova**, a sharp young chess coach (Pip appears as an easter egg) |
+| Guide character | **Pip the Pawn**, a brave little pawn who dreams of becoming a queen | Pip plus **Captain Rook** (reuses the Little Knights voice-over, with subtitles; see [critique change 5](10-plan-critique.md#102-changes-made)) | **Coach Nova**, a sharp young chess coach (Pip appears as an easter egg) |
 | Pieces | Characters with faces and expressions (Story Set) | Stylised toy-like pieces | Realistic tournament Staunton-style pieces |
 | Text | None required; everything is voiced | Short sentences plus voice | Full text, voice optional |
 | Session length | 5–10 min | 10–15 min | 15–30 min |
@@ -45,7 +45,8 @@ override the track, and the app suggests a switch when a child's behaviour sugge
 
 ## 1.5 Design principles
 
-1. **Show, don't tell.** Every rule is first *seen* in 3D, then *tried*, then *named*.
+0. **The app is the teacher.** A child can learn everything alone: no adult is needed to start, read, explain or rescue. See [Self-Guided Learning](11-self-guided-learning.md).
+1. **Show, don't tell, and ask.** Every rule is first *seen* in 3D, then *tried*, then *named*. The guide asks a question at least every 30–60 seconds.
 2. **One idea per lesson.** Lessons last 3–7 minutes and teach exactly one concept.
 3. **Play within 30 seconds.** The child touches a piece within 30 seconds of opening the app.
 4. **Mistakes are safe.** Wrong moves are learning moments, never punishments. No "Game Over" screens for young children.
@@ -68,6 +69,9 @@ override the track, and the app suggests a switch when a child's behaviour sugge
 ```
 
 ## 1.7 Feature pillars
+
+The home screen stays simple: Pip, one big **▶ Continue** button, and four doors (**Learn · Practise · Play · My Trophies**).
+The pillars below sit behind those doors and unlock gradually.
 
 1. **Adventure map and lessons:** a 3D world of kingdoms, one per level, containing story lessons.
 2. **Mini-games:** more than 30 skill games (Pawn Wars, Star Collector, Knight's Quest and others).

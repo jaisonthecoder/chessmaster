@@ -16,6 +16,12 @@ REWARD     – stars, sticker, XP, unlock
 [LK] [EX] [AC] – line variants for Little Knights / Explorers / Academy
 ```
 
+> **Voice sets (after critique round 1):** only two voice sets are recorded: **Pip** (LK and EX) and **Nova** (AC).
+> Explorers reuse the LK voice lines with subtitles; [EX] variants change practice difficulty, rewards and
+> on-screen text, not the recording. Every lesson must also follow the self-guided rules in
+> [document 11](11-self-guided-learning.md): a question every 30–60 seconds, three explanation styles per concept,
+> a "Spot Pip's mistake" item, and a teach-back at the end.
+
 **The lesson rhythm (every lesson):**
 1. **Hook** (≤ 20 s): a story moment or a question.
 2. **Watch** (I do): the character demonstrates in 3D.
@@ -425,7 +431,7 @@ VICTORY  Boss bows, gate opens, map camera flies to the next kingdom; certificat
 
 ## 4.18 Voice-over and localisation notes
 
-- Record each line in three voice styles (LK, EX, AC) where it differs; about 4,000 lines for the full curriculum.
+- Record each line in two voice sets: Pip (LK, reused by EX with subtitles) and Nova (AC). That is about 2,700 lines per language for the full curriculum, down from about 4,000 with three sets.
 - Keep lines under 12 words for the Little Knights track, and pause for interaction.
 - Launch languages: English and Arabic (right-to-left UI, with board orientation unchanged). Later: Spanish, French, Hindi, Urdu, Mandarin.
 - Piece names follow each language's chess terminology. Algebraic piece letters are localised (for example, Spanish uses R=Rey, D=Dama), with an option to show the international letters.

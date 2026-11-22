@@ -161,7 +161,8 @@ Assignment                        id, classroom_id, content_ref, due_at
 ## 7.8 Privacy, safety and compliance
 
 - **COPPA** (US), **GDPR / GDPR-K** (EU), **UK Age Appropriate Design Code**, **UAE PDPL** and local equivalents.
-- A parent or teacher creates the account; verifiable parental consent; child profiles store **no personal data** (nickname + birth year only).
+- **Play first, no account:** a child can start alone. Local profiles hold only an avatar, an age band and progress, all stored on the device, with no network identity.
+- A parent or teacher account (with verifiable parental consent) is needed only for cloud sync, classrooms, purchases and reports. It sits behind the parent gate. Child profiles never store personal data (nickname + birth year only).
 - No ads, no third-party trackers, no data selling. Analytics are anonymised and aggregated.
 - **No free-text chat.** Friend games use invite codes, with preset emotes only ("Good game!", "Nice move!").
 - Data is encrypted in transit (TLS) and at rest; the region is chosen by the account's locale.
@@ -205,4 +206,4 @@ chessmaster/
 | Visual regression | Playwright screenshots of key 3D scenes | Rendering regressions |
 | Performance | A device lab (low, mid and high tiers) + automated frame-time capture | FPS budgets, memory, load time |
 | Accessibility | axe-core + manual screen-reader passes | WCAG 2.2 AA for the UI |
-| Usability | Moderated play-tests with kids in each age band (with parental consent) | Comprehension, fun, frustration points |
+| Usability | Moderated play-tests with kids in each age band (with parental consent) | Comprehension, fun, frustration points, and **adult-intervention count** (target: zero; see [11](11-self-guided-learning.md)) |

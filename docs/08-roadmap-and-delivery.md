@@ -13,7 +13,12 @@
 ## 8.2 MVP feature list (Phase 1)
 
 **Must have**
-- [ ] Onboarding: parent creates an account, child profile, age track selection, "light on the right" first interaction within 30 seconds
+- [ ] Play-first onboarding with **no account and no reading**: tap the bell (sound check), tap the cake (age), pick an avatar, first piece touched within 30 seconds ([11.2](11-self-guided-learning.md#112-first-launch-with-no-adult-present)). A parent gate protects settings, sync and purchases
+- [ ] Simple home screen: ▶ Continue + four doors (Learn, Practise, Play, My Trophies); ❓ Help, 🔁 Show me again and 🏠 Home on every screen
+- [ ] Guide question rhythm (a question every 30–60 s), the 12 question types, 3 explanation styles per concept, and the escalation path
+- [ ] Scenario playbook behaviours A–G from [11.7](11-self-guided-learning.md#117-scenario-playbook-what-the-app-does-when) (idle, random tapping, frustration, returning after a break and so on)
+- [ ] Coached games: blunder warnings, check alerts, special-move hints, 3-moment review
+- [ ] Rules coverage matrix check in CI (every rule has a lesson, practice, question and boss item)
 - [ ] Adventure map: Board Village, Piece Valley, Royal Castle
 - [ ] Lessons 1.1–3.12 in the LK and EX voices, with voice-over and subtitles
 - [ ] 3D board (Story Set + Adventure Set), tap and drag moves, legal dots, highlights, 2D toggle
@@ -64,6 +69,7 @@
 | Area | Metric | Target (after launch) |
 |---|---|---|
 | Learning | Rules Champion pass rate | ≥ 95% |
+| Self-guided | Adult interventions in play-tests (Level 1, ages 5–6; Levels 1–3, age 8) | Zero for ≥ 90% of children |
 | Learning | Concepts mastered per active child per week | ≥ 2 |
 | Learning | Puzzle rating growth per month (active kids) | +50 or more |
 | Engagement | D1 / D7 / D30 retention | 55% / 40% / 25% |

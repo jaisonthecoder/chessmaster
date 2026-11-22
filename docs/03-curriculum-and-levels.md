@@ -18,6 +18,9 @@ Level (10)  ──▶  Kingdom on the Adventure Map
 - **Mastery gate:** a child moves on when they score **≥ 80%** on a lesson's check and pass the Boss Battle.
 - **Age adaptation:** every lesson exists in three voices (Little Knights, Explorers, Academy). See [Lesson Scripts](04-lesson-scripts.md).
 - **Approximate strength** is shown only to parents and coaches, never as pressure on the child.
+- **"Too easy? Prove it!" ⚡** (ages 8+): any lesson can be completed by passing its check questions straight away.
+- **The map moves like the piece:** in Piece Valley the child travels between map stops using the movement of the piece they are learning (rook rails, bishop diagonals, knight lily-pad hops), so navigation is extra practice.
+- **Self-guided by default:** every lesson follows the question rhythm and scenario playbook in [document 11](11-self-guided-learning.md). Every rule is traced in the rules coverage matrix (11.9).
 
 ## 3.2 The Adventure Map: ten kingdoms
 
